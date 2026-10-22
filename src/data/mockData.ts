@@ -47,9 +47,9 @@ export const mockProperties: Property[] = [
     ],
     "description": "Casa de praia agradável e bem arejada na Praia Central de Guaratuba. Espaço perfeito para a família passar a virada do ano com tranquilidade a poucos passos do mar.",
     "images": [
-      "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?auto=format&fit=crop&w=1200&q=80"
+      "/images/houses/guaratuba_central_1.png",
+      "/images/houses/guaratuba_central_2.png",
+      "/images/houses/guaratuba_central_3.png"
     ]
   },
   {
@@ -125,9 +125,9 @@ export const mockProperties: Property[] = [
     ],
     "description": "Casa térrea acolhedora em Matinhos. Rua tranquila de moradores, ambiente seguro e familiar perto da orla revitalizada.",
     "images": [
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+      "/images/houses/matinhos_brava_1.png",
+      "/images/houses/matinhos_brava_2.png",
+      "/images/houses/matinhos_brava_3.png"
     ]
   },
   {

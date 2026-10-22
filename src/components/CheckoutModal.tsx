@@ -61,7 +61,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             });
 
             if (res.qrBase64) {
-              setQrCodeDataUrl(res.qrBase64);
+              const formatted = res.qrBase64.startsWith('data:')
+                ? res.qrBase64
+                : `data:image/png;base64,${res.qrBase64}`;
+              setQrCodeDataUrl(formatted);
             } else if (res.qrCodeText) {
               try {
                 const url = await QRCode.toDataURL(res.qrCodeText, {

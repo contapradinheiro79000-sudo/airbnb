@@ -14,17 +14,22 @@ export const categories: Category[] = [
 export const mockProperties: Property[] = [
   {
     "id": "1",
-    "title": "Casa de Praia Aconchegante c/ Quintal e Churrasqueira",
+    "title": "Casa de Praia com Varanda e Churrasqueira na Praia Central",
     "location": "Guaratuba, Paraná",
-    "distance": "A 200m da Praia Central",
+    "distance": "A 150m da Praia Central",
     "dates": "26 de dez. – 2 de jan.",
     "pricePerNight": 125,
     "originalPrice": 190,
     "discountBadge": "34% OFF · Réveillon Guaratuba",
-    "rating": 4.93,
-    "reviewCount": 76,
+    "rating": 4.96,
+    "reviewCount": 78,
     "isGuestFavorite": true,
     "category": "parana",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_1.jpg",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Eduardo Guimarães",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
@@ -39,32 +44,32 @@ export const mockProperties: Property[] = [
     },
     "amenities": [
       "Churrasqueira de tijolinho coberta",
-      "Quintal espaçoso todo murado para crianças e pets",
+      "Quintal fechado e seguro para família e pets",
       "Varanda arejada com ganchos para rede",
-      "Ar-condicionado nos quartos e ventiladores",
-      "Vaga para 3 carros na garagem",
-      "Ducha fria no quintal pós-praia"
+      "Ventiladores e ar-condicionado",
+      "Estacionamento para 3 carros",
+      "Duchão externo pós-praia"
     ],
-    "description": "Casa térrea simples e muito agradável em rua tranquila de Guaratuba. Pertinho da praia, feirinha e comércio. Ideal para reunir a família no fim de ano sem complicação.",
-    "images": [
-      "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa de praia agradável e bem arejada na Praia Central de Guaratuba. Espaço perfeito para a família passar a virada do ano com tranquilidade a poucos passos do mar."
   },
   {
     "id": "2",
-    "title": "Sobrado Arejado Familiar a 150m do Mar",
+    "title": "Sobrado Familiar no Brejatuba a 100m da Areia",
     "location": "Guaratuba, Paraná",
-    "distance": "Praia do Brejatuba · Perto do Cristo",
+    "distance": "Praia do Brejatuba · Perto do Morro do Cristo",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 115,
     "originalPrice": 175,
     "discountBadge": "34% OFF · Brejatuba Réveillon",
-    "rating": 4.91,
-    "reviewCount": 64,
+    "rating": 4.92,
+    "reviewCount": 65,
     "isGuestFavorite": true,
     "category": "parana",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_7.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_8.jpg",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Mariana Rocha",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -78,32 +83,32 @@ export const mockProperties: Property[] = [
       "baths": 2
     },
     "amenities": [
-      "Sacada fresca com vista da brisa do mar",
-      "Churrasqueira individual",
-      "Ventiladores de teto e ar-condicionado",
-      "Estacionamento para 2 carros",
-      "Cadeiras de praia e guarda-sol disponíveis"
+      "Sacada arejada com vista lateral do mar",
+      "Churrasqueira individual no pátio",
+      "Ventiladores de teto nos quartos",
+      "Garagem fechada para 2 carros",
+      "Cadeiras de praia inclusas"
     ],
-    "description": "Sobrado aconchegante no Brejatuba, ideal para curtir as férias com tranquilidade. Rua calma e segura, a uma curta caminhada da praia.",
-    "images": [
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Sobrado fresco e bem cuidado no Brejatuba. Bairro calmo, ideal para caminhar até a praia e assistir aos fogos na orla de Guaratuba."
   },
   {
     "id": "3",
-    "title": "Casa Familiar Simples com Varanda e Rede",
+    "title": "Casa Térrea com Quintal e Varanda na Praia Brava",
     "location": "Matinhos, Paraná",
-    "distance": "A 180m da Praia Brava de Matinhos",
+    "distance": "A 120m da orla da Praia Brava",
     "dates": "28 de dez. – 3 de jan.",
     "pricePerNight": 105,
     "originalPrice": 160,
     "discountBadge": "34% OFF · Fim de Ano Matinhos",
     "rating": 4.9,
-    "reviewCount": 58,
+    "reviewCount": 59,
     "isGuestFavorite": true,
     "category": "parana",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_9.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_10.jpg",
+      "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Regina Célia",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -117,32 +122,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Varanda coberta com rede de descanso",
-      "Churrasqueira com grelha e espetos",
-      "Cozinha completa com geladeira duplex e fogão",
-      "Garagem coberta para 2 veículos",
-      "Ducha externa refrescante"
+      "Varanda espaçosa com rede de descanso",
+      "Churrasqueira na área de lazer",
+      "Cozinha completa com geladeira duplex",
+      "Vaga interna para 2 veículos",
+      "Ducha no quintal"
     ],
-    "description": "Ambiente caseiro e acolhedor em Matinhos. Casa fresca, muito limpa e bem cuidada, perfeita para quem busca descanso com a família perto do mar.",
-    "images": [
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa térrea acolhedora em Matinhos. Rua tranquila de moradores, ambiente seguro e familiar perto da orla revitalizada."
   },
   {
     "id": "4",
-    "title": "Apartamento Familiar Confortável na Praia Mansa",
+    "title": "Apartamento Confortável a 100m da Praia Mansa",
     "location": "Caiobá, Paraná",
-    "distance": "A 150m da orla da Praia Mansa",
+    "distance": "A 100m das águas calmas da Praia Mansa",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 135,
     "originalPrice": 205,
     "discountBadge": "34% OFF · Caiobá Réveillon",
-    "rating": 4.94,
-    "reviewCount": 92,
+    "rating": 4.95,
+    "reviewCount": 94,
     "isGuestFavorite": true,
     "category": "parana",
+    "images": [
+      "/images/cd084cec-85b6-4f5f-ac08-a83cd5d034db.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_5.jpg",
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Carlos Alberto Siqueira",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
@@ -156,32 +161,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Sacada ventilada com churrasqueira a carvão",
+      "Sacada ventilada com churrasqueira",
       "Ar-condicionado nos quartos",
-      "Garagem demarcada no prédio",
-      "Cozinha montada com micro-ondas e cafeteira",
-      "Prédio familiar tranquilo e seguro"
+      "Garagem privativa coberta",
+      "Cozinha com micro-ondas e cafeteira",
+      "Prédio familiar sossegado"
     ],
-    "description": "Apartamento prático e aconchegante para curtir as águas mansas e limpas de Caiobá. Ótimo para famílias com crianças pequenas e idosos.",
-    "images": [
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Localização privilegiada na Praia Mansa de Caiobá. Perfeito para famílias com crianças, águas calmas sem ondas fortes e fácil acesso a pé."
   },
   {
     "id": "5",
-    "title": "Chalé Rústico e Sossegado sob as Árvores",
+    "title": "Chalé Rústico e Sossegado sob as Árvores em Encantadas",
     "location": "Ilha do Mel, Paraná",
-    "distance": "A 80m da Praia de Encantadas",
+    "distance": "A 60m da Praia de Encantadas",
     "dates": "28 de dez. – 3 de jan.",
     "pricePerNight": 95,
     "originalPrice": 150,
     "discountBadge": "36% OFF · Ilha do Mel",
-    "rating": 4.95,
-    "reviewCount": 62,
+    "rating": 4.96,
+    "reviewCount": 68,
     "isGuestFavorite": true,
     "category": "parana",
+    "images": [
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Tiago & Bruna",
       "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
@@ -195,32 +200,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Varanda de madeira com rede entre as árvores",
-      "Ventilador e brisa natural constante",
-      "Wi-Fi para conexão e trabalho leve",
-      "Cozinha com utensílios para pequenas refeições",
+      "Varanda de madeira com rede sob coqueiros e árvores nativas",
+      "Ventilador e brisa do mar fresca",
+      "Wi-Fi para conexão",
+      "Cozinha compacta para café e lanches",
       "Chuveiro quente a gás"
     ],
-    "description": "Chalé simples de madeira cercado de restinga e pássaros nativos. Silêncio absoluto à noite e pertinho do trapiche e dos restaurantes locais.",
-    "images": [
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Chalé autêntico na mágica Ilha do Mel. Sem carros e sem barulho, caminho de areia até a praia e contato puro com a natureza preservada."
   },
   {
     "id": "6",
-    "title": "Apartamento Prático e Familiar a 2 Quadras do Mar",
+    "title": "Apartamento Prático e Familiar a 2 Quadras da Praia Central",
     "location": "Balneário Camboriú, Santa Catarina",
-    "distance": "A 200m da Avenida Atlântica",
+    "distance": "A 180m da Avenida Atlântica",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 145,
     "originalPrice": 220,
     "discountBadge": "34% OFF · Réveillon BC",
-    "rating": 4.92,
-    "reviewCount": 110,
+    "rating": 4.93,
+    "reviewCount": 112,
     "isGuestFavorite": true,
     "category": "sc",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_2.jpg",
+      "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Felipe Zanella",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
@@ -234,32 +239,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Sacada com churrasqueira",
+      "Sacada com churrasqueira integrada",
       "Ar-condicionado nos dormitórios",
-      "Vaga de garagem rotativa no edifício",
-      "Wi-Fi e Smart TV na sala",
-      "Portaria segura e elevador"
+      "Garagem no edifício",
+      "Wi-Fi e TV na sala",
+      "Portaria 24 horas"
     ],
-    "description": "Apartamento aconchegante, sem ostentação, com excelente custo-benefício em Balneário Camboriú. Dá para fazer tudo a pé até a praia e os supermercados.",
-    "images": [
-      "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Apartamento confortável e sem luxos desnecessários em Balneário Camboriú. Dá para fazer tudo a pé até a praia e curtir a virada do ano com economia."
   },
   {
     "id": "7",
-    "title": "Casa Simples com Varanda e Vista do Verde",
+    "title": "Casa de Praia Aconchegante em Quatro Ilhas",
     "location": "Bombinhas, Santa Catarina",
-    "distance": "A 250m da Praia de Quatro Ilhas",
+    "distance": "A 200m da Praia de Quatro Ilhas",
     "dates": "27 de dez. – 3 de jan.",
     "pricePerNight": 130,
     "originalPrice": 200,
     "discountBadge": "35% OFF · Bombinhas Verão",
-    "rating": 4.93,
-    "reviewCount": 84,
+    "rating": 4.94,
+    "reviewCount": 86,
     "isGuestFavorite": true,
     "category": "sc",
+    "images": [
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Luciana & Marcelo",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -273,18 +278,13 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Varanda arejada com churrasqueira de alvenaria",
-      "Quintal com árvores frutíferas e sombra fresca",
+      "Varanda arejada com churrasqueira",
+      "Quintal com árvores e sombra para relaxar",
       "Ar-condicionado e ventiladores",
-      "Espaço para 2 carros",
-      "Ducha externa pós-mar"
+      "Vaga para 2 carros",
+      "Duchão externo pós-mar"
     ],
-    "description": "Casa tranquila de praia em Bombinhas. Bairro sossegado para relaxar com a família após um dia de mergulho nas praias de águas cristalinas.",
-    "images": [
-      "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa tranquila em Bombinhas, pertinho do mar cristalino de Quatro Ilhas e das trilhas ecológicas. Ideal para descanso em família."
   },
   {
     "id": "8",
@@ -296,9 +296,14 @@ export const mockProperties: Property[] = [
     "originalPrice": 170,
     "discountBadge": "35% OFF · Mariscal Réveillon",
     "rating": 4.91,
-    "reviewCount": 52,
+    "reviewCount": 54,
     "isGuestFavorite": true,
     "category": "sc",
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Gabriel Becker",
       "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80",
@@ -313,31 +318,31 @@ export const mockProperties: Property[] = [
     },
     "amenities": [
       "Varanda com rede e brisa constante",
-      "Churrasqueira portátil para churrasco em família",
-      "Ventiladores e telas mosqueteiras nas janelas",
-      "Vaga privativa para 1 carro",
+      "Churrasqueira portátil para churrasco",
+      "Ventiladores e telas nas janelas",
+      "Vaga privativa para carro",
       "Cadeiras de praia e guarda-sol"
     ],
-    "description": "Chalé simples, limpo e prático pertinho da extensa faixa de areia de Mariscal. Ótimo para quem quer fugir da correria e curtir a virada do ano em paz.",
-    "images": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Chalé simples, limpo e prático pertinho da areia branca de Mariscal. Clima de paz e simplicidade para curtir a virada do ano sem estresse."
   },
   {
     "id": "9",
-    "title": "Casa Térrea Familiar com Quintal no Campeche",
+    "title": "Casa Térrea com Quintal Gramado no Campeche",
     "location": "Florianópolis, Santa Catarina",
-    "distance": "A 300m da Praia do Campeche",
+    "distance": "A 250m da Praia do Campeche",
     "dates": "26 de dez. – 2 de jan.",
     "pricePerNight": 135,
     "originalPrice": 210,
     "discountBadge": "35% OFF · Campeche Floripa",
-    "rating": 4.94,
-    "reviewCount": 78,
+    "rating": 4.95,
+    "reviewCount": 82,
     "isGuestFavorite": true,
     "category": "sc",
+    "images": [
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Renata D’Ávila",
       "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
@@ -351,32 +356,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Quintal gramado cercado com churrasqueira",
-      "Varanda arejada com ganchos para duas redes",
-      "Ar-condicionado no quarto principal",
+      "Quintal murado com churrasqueira",
+      "Varanda fresca com ganchos de rede",
+      "Ar-condicionado no dormitório",
       "Estacionamento para 2 carros",
-      "Cozinha com fogão a gás e utensílios básicos"
+      "Cozinha com fogão e geladeira"
     ],
-    "description": "Casa térrea acolhedora no sul da ilha. Bairro calmo e familiar, com comércio local por perto e fácil acesso à praia e passeios de barco para a Ilha do Campeche.",
-    "images": [
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa térrea acolhedora no sul da ilha de Florianópolis. Bairro tranquilo, perto da praia e dos barcos para a Ilha do Campeche."
   },
   {
     "id": "10",
-    "title": "Sobrado Aconchegante a 150m da Praia em Canasvieiras",
+    "title": "Sobrado Arejado a 150m da Praia em Canasvieiras",
     "location": "Florianópolis, Santa Catarina",
     "distance": "A 150m da Praia de Canasvieiras",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 120,
     "originalPrice": 185,
     "discountBadge": "35% OFF · Canasvieiras Réveillon",
-    "rating": 4.9,
-    "reviewCount": 65,
+    "rating": 4.91,
+    "reviewCount": 67,
     "isGuestFavorite": true,
     "category": "sc",
+    "images": [
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Diego Fontana",
       "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
@@ -391,31 +396,31 @@ export const mockProperties: Property[] = [
     },
     "amenities": [
       "Sacada com churrasqueira a carvão",
-      "Ar-condicionado split nos dormitórios",
-      "Vaga de garagem coberta",
-      "Wi-Fi para navegação da família",
-      "Cozinha com geladeira e micro-ondas"
+      "Ar-condicionado nos dormitórios",
+      "Garagem coberta privativa",
+      "Wi-Fi para a família",
+      "Cozinha com geladeira e fogão"
     ],
-    "description": "Excelente opção no norte da ilha. Águas calmas e quentes para banho de mar, centrinho com pizzarias e artesanato acessível a pé.",
-    "images": [
-      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Hospedagem confortável no norte de Florianópolis. Mar calmo e quentinho, perfeito para caminhadas e lazer com as crianças."
   },
   {
     "id": "11",
-    "title": "Casa Rústica com Varanda e Rede na Praia da Ferrugem",
+    "title": "Casa Rústica com Varanda e Rede na Ferrugem",
     "location": "Garopaba, Santa Catarina",
-    "distance": "A 200m da Praia da Ferrugem",
+    "distance": "A 180m da Praia da Ferrugem",
     "dates": "28 de dez. – 3 de jan.",
     "pricePerNight": 95,
     "originalPrice": 155,
     "discountBadge": "38% OFF · Garopaba Réveillon",
-    "rating": 4.92,
-    "reviewCount": 71,
+    "rating": 4.93,
+    "reviewCount": 74,
     "isGuestFavorite": true,
     "category": "sc",
+    "images": [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Patrícia Vianna",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -430,31 +435,31 @@ export const mockProperties: Property[] = [
     },
     "amenities": [
       "Varanda charmosa com rede e plantas nativas",
-      "Churrasqueira simples de quintal",
-      "Ventiladores e duchão externo pós-praia",
-      "Espaço seguro para guardar carro",
-      "Cozinha com geladeira e fogão caseiro"
+      "Churrasqueira no pátio",
+      "Ventiladores e duchão pós-praia",
+      "Pátio para estacionar carro",
+      "Cozinha com fogão e utensílios básicos"
     ],
-    "description": "Casa de praia no estilo clássico de Garopaba. Sem luxo, mas cheia de charme, frescor e aconchego para curtir a natureza e as ondas da Ferrugem.",
-    "images": [
-      "https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Estilo autêntico praiano de Garopaba. Sem luxo, com muita paz, natureza e frescor para aproveitar a Praia da Ferrugem."
   },
   {
     "id": "12",
     "title": "Apartamento Familiar Confortável em Meia Praia",
     "location": "Itapema, Santa Catarina",
-    "distance": "A 150m da orla de Meia Praia",
+    "distance": "A 150m do calçadão de Meia Praia",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 125,
     "originalPrice": 195,
     "discountBadge": "35% OFF · Itapema Réveillon",
-    "rating": 4.91,
-    "reviewCount": 88,
+    "rating": 4.92,
+    "reviewCount": 91,
     "isGuestFavorite": true,
     "category": "sc",
+    "images": [
+      "/images/fb474f75-7020-45bc-a11c-2a683b5d3c34.png",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Valter Simon",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -470,30 +475,30 @@ export const mockProperties: Property[] = [
     "amenities": [
       "Sacada arejada com churrasqueira",
       "Ar-condicionado nos quartos",
-      "Vaga privativa de garagem",
-      "Prédio familiar com elevador",
-      "Wi-Fi e TV aberta"
+      "Vaga de garagem no prédio",
+      "Edifício familiar com elevador",
+      "Wi-Fi e TV"
     ],
-    "description": "Acomodação muito bem localizada em Meia Praia. Prédio calmo, próximo a padaria, farmácia e ao calçadão à beira-mar.",
-    "images": [
-      "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Excelente custo-benefício em Itapema. Prédio tranquilo, perto da praia, padarias, farmácias e do calçadão."
   },
   {
     "id": "13",
-    "title": "Casa Simples e Fresca com Varanda no Canto de Maresias",
+    "title": "Casa Caiçara Fresca com Varanda em Maresias",
     "location": "Maresias, São Sebastião - SP",
-    "distance": "A 250m da Praia de Maresias",
+    "distance": "A 200m da Praia de Maresias",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 130,
     "originalPrice": 200,
     "discountBadge": "35% OFF · Réveillon Maresias",
-    "rating": 4.93,
-    "reviewCount": 82,
+    "rating": 4.94,
+    "reviewCount": 85,
     "isGuestFavorite": true,
     "category": "sp",
+    "images": [
+      "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Gustavo Mendonça",
       "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80",
@@ -509,30 +514,30 @@ export const mockProperties: Property[] = [
     "amenities": [
       "Varanda espaçosa com rede e plantas tropicais",
       "Churrasqueira no quintal",
-      "Ventiladores potentes e ar-condicionado",
+      "Ventiladores e ar-condicionado",
       "Estacionamento para 2 carros",
-      "Ducha no jardim"
+      "Ducha externa no jardim"
     ],
-    "description": "Casa caiçara acolhedora e arejada no Canto do Moreira. Lugar arborizado e sossegado para curtir a energia de Maresias em família.",
-    "images": [
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa aconchegante cercada por vegetação tropical em Maresias. Local sossegado e seguro para desfrutar o verão com a família."
   },
   {
     "id": "14",
-    "title": "Casa Térrea Familiar com Churrasqueira na Praia Grande",
+    "title": "Casa Familiar com Churrasqueira na Praia Grande",
     "location": "Ubatuba, São Paulo",
-    "distance": "A 200m da Praia Grande",
+    "distance": "A 180m da Praia Grande de Ubatuba",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 115,
     "originalPrice": 175,
     "discountBadge": "34% OFF · Ubatuba Réveillon",
-    "rating": 4.92,
-    "reviewCount": 94,
+    "rating": 4.93,
+    "reviewCount": 97,
     "isGuestFavorite": true,
     "category": "sp",
+    "images": [
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Ana Cláudia Fontes",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
@@ -546,32 +551,32 @@ export const mockProperties: Property[] = [
       "baths": 2
     },
     "amenities": [
-      "Churrasqueira coberta nos fundos",
+      "Churrasqueira coberta na área externa",
       "Varanda fresca para descansar à tarde",
       "Ventiladores de teto em todos os quartos",
       "Garagem fechada para 2 carros",
-      "Cozinha com geladeira e fogão"
+      "Cozinha com geladeira duplex"
     ],
-    "description": "Casa prática e funcional para férias em Ubatuba. Rua tranquila com vizinhos moradores e proximidade dos quiosques da Praia Grande e Tenório.",
-    "images": [
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa prática e espaçosa em Ubatuba. Rua com moradores, perto dos quiosques e das praias do Tenório e Praia Grande."
   },
   {
     "id": "15",
-    "title": "Chalé Rústico com Varanda e Rede Cercado de Verde",
+    "title": "Chalé Rústico com Varanda e Rede na Praia do Curral",
     "location": "Ilhabela, São Paulo",
-    "distance": "A 300m da Praia do Curral",
+    "distance": "A 250m da Praia do Curral",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 120,
     "originalPrice": 185,
     "discountBadge": "35% OFF · Ilhabela Verão",
-    "rating": 4.95,
-    "reviewCount": 89,
+    "rating": 4.96,
+    "reviewCount": 92,
     "isGuestFavorite": true,
     "category": "sp",
+    "images": [
+      "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Leonardo & Sofia",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
@@ -585,32 +590,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Deck de madeira com rede e vista da mata",
-      "Ventiladores e brisa fresca da serra",
-      "Wi-Fi para conexão básica",
+      "Deck de madeira com rede e sombra de coqueiro",
+      "Ventiladores e brisa constante da mata",
+      "Wi-Fi para conexão",
       "Vaga para carro no terreno",
       "Cozinha compacta equipada"
     ],
-    "description": "Chalé sossegado e fresco em Ilhabela, ideal para quem quer descansar longe do barulho da cidade e relaxar com o canto dos pássaros.",
-    "images": [
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Chalé sossegado em Ilhabela, perfeito para desconectar da rotina e descansar com os sons da natureza e do mar."
   },
   {
     "id": "16",
-    "title": "Apartamento Prático e Familiar a 100m da Praia",
+    "title": "Apartamento Prático a 100m da Praia de Pitangueiras",
     "location": "Guarujá, São Paulo",
-    "distance": "A 100m da Praia de Pitangueiras",
+    "distance": "A 100m da orla de Pitangueiras",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 110,
     "originalPrice": 170,
     "discountBadge": "35% OFF · Guarujá Réveillon",
-    "rating": 4.9,
-    "reviewCount": 102,
+    "rating": 4.91,
+    "reviewCount": 105,
     "isGuestFavorite": true,
     "category": "sp",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555.jpg",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Beatriz Almeida",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -627,29 +632,29 @@ export const mockProperties: Property[] = [
       "Apartamento arejado com ventiladores nos quartos",
       "Vaga de garagem no condomínio",
       "Portaria 24 horas",
-      "Cozinha montada para preparar refeições",
-      "Localização central perto de tudo"
+      "Cozinha montada para refeições caseiras",
+      "Perto de tudo: feira, padaria e praia"
     ],
-    "description": "Acomodação familiar no centro de Pitangueiras. Não precisa de carro para nada: praia, feirinha, padarias e farmácias a poucos passos.",
-    "images": [
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Acomodação familiar no centro de Pitangueiras no Guarujá. Esqueça o carro na garagem e faça tudo a pé até a areia."
   },
   {
     "id": "17",
-    "title": "Casa Térrea Aconchegante com Jardim para Família",
+    "title": "Casa Térrea Aconchegante com Jardim em Juquehy",
     "location": "Juquehy, São Sebastião - SP",
-    "distance": "A 280m da Praia de Juquehy",
+    "distance": "A 250m da Praia de Juquehy",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 135,
     "originalPrice": 205,
     "discountBadge": "34% OFF · Juquehy Réveillon",
-    "rating": 4.93,
-    "reviewCount": 68,
+    "rating": 4.94,
+    "reviewCount": 71,
     "isGuestFavorite": true,
     "category": "sp",
+    "images": [
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Rodrigo Paes",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
@@ -663,32 +668,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Quintal fechado com gramado e plantas",
+      "Quintal fechado com grama e sombra fresca",
       "Churrasqueira com mesa para almoço ao ar livre",
-      "Ventiladores e ar-condicionado no dormitório",
+      "Ventiladores e ar-condicionado no quarto",
       "Vaga interna para 2 veículos",
-      "Ducha externa"
+      "Ducha externa pós-praia"
     ],
-    "description": "Casa tranquila em Juquehy para desfrutar o verão em família. Praia com águas limpas e infraestrutura excelente para passeios diurnos e noturnos.",
-    "images": [
-      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa tranquila em Juquehy para desfrutar o verão em família. Praia com águas limpas e infraestrutura excelente para caminhar."
   },
   {
     "id": "18",
     "title": "Casa Simples com Quintal e Churrasqueira em Bertioga",
     "location": "Bertioga, São Paulo",
-    "distance": "A 250m da Praia da Enseada",
+    "distance": "A 200m da Praia da Enseada",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 105,
     "originalPrice": 165,
     "discountBadge": "36% OFF · Bertioga Réveillon",
-    "rating": 4.89,
-    "reviewCount": 74,
+    "rating": 4.9,
+    "reviewCount": 77,
     "isGuestFavorite": true,
     "category": "sp",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_7.jpg",
+      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Camila Mattos",
       "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
@@ -702,32 +707,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Churrasqueira de tijolo na área externa",
-      "Varanda fresca com banco de madeira",
+      "Churrasqueira de tijolo na área coberta",
+      "Varanda arejada com rede",
       "Ventiladores e ar-condicionado",
       "Garagem fechada para 2 carros",
-      "Cozinha com utensílios e geladeira duplex"
+      "Cozinha com utensílios e geladeira"
     ],
-    "description": "Opção econômica e confortável em Bertioga. Quintal seguro para crianças brincarem e proximidade da praia e do forte histórico.",
-    "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Excelente opção econômica em Bertioga. Quintal seguro para crianças brincarem e proximidade da praia e do canal."
   },
   {
     "id": "19",
     "title": "Casa Buziana Tradicional com Varanda Arejada",
     "location": "Búzios, Rio de Janeiro",
-    "distance": "A 250m da Praia de Geribá",
+    "distance": "A 200m da Praia de Geribá",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 135,
     "originalPrice": 210,
     "discountBadge": "35% OFF · Réveillon Búzios",
-    "rating": 4.95,
-    "reviewCount": 96,
+    "rating": 4.96,
+    "reviewCount": 99,
     "isGuestFavorite": true,
     "category": "rj",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Marcelle Dupont",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -741,32 +746,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Varanda com rede e jardim típico buziano",
+      "Varanda com rede e jardim típico de Búzios",
       "Churrasqueira de alvenaria",
       "Ventiladores e ar-condicionado nos quartos",
-      "Vaga para 2 carros dentro do terreno",
-      "Wi-Fi e cozinha caseira"
+      "Vaga para 2 carros no terreno",
+      "Wi-Fi e cozinha equipada"
     ],
-    "description": "Casa cheia de aconchego e estilo descontraído em Geribá. Rua sem saída super calma, ideal para descansar depois de curtir a praia e a Rua das Pedras.",
-    "images": [
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa aconchegante e cheia de estilo descontraído em Geribá. Rua sem saída super calma, ideal para descansar depois de curtir a praia."
   },
   {
     "id": "20",
-    "title": "Casa Arejada com Vista das Colinas em Arraial",
+    "title": "Casa Arejada com Vista das Colinas na Prainha",
     "location": "Arraial do Cabo, Rio de Janeiro",
-    "distance": "A 200m da Prainha de Arraial",
+    "distance": "A 150m da Prainha de Arraial",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 110,
     "originalPrice": 170,
     "discountBadge": "35% OFF · Arraial Réveillon",
-    "rating": 4.94,
-    "reviewCount": 88,
+    "rating": 4.95,
+    "reviewCount": 91,
     "isGuestFavorite": true,
     "category": "rj",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Thiago Nogueira",
       "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
@@ -784,28 +789,28 @@ export const mockProperties: Property[] = [
       "Churrasqueira simples no pátio",
       "Ventiladores e ar-condicionado",
       "Vaga de garagem privativa",
-      "Cozinha com geladeira, fogão e micro-ondas"
+      "Cozinha com geladeira e fogão"
     ],
-    "description": "Casa fresca e tranquila em Arraial do Cabo. Fácil acesso à areia branca da Prainha e aos passeios de barco para as praias do Farol e Forno.",
-    "images": [
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa fresca e tranquila em Arraial do Cabo. Fácil acesso à água turquesa da Prainha e aos barcos para as praias do Farol e Forno."
   },
   {
     "id": "21",
-    "title": "Casa Familiar com Quintal a 200m da Praia do Forte",
+    "title": "Casa Familiar com Quintal a 150m da Praia do Forte",
     "location": "Cabo Frio, Rio de Janeiro",
-    "distance": "A 200m da Praia do Forte",
+    "distance": "A 150m da Praia do Forte",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 105,
     "originalPrice": 160,
     "discountBadge": "34% OFF · Cabo Frio Fim de Ano",
-    "rating": 4.91,
-    "reviewCount": 80,
+    "rating": 4.92,
+    "reviewCount": 84,
     "isGuestFavorite": true,
     "category": "rj",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_9.jpg",
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Marilena Costa",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -819,32 +824,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Quintal murado com churrasqueira de alvenaria",
+      "Quintal murado com churrasqueira de tijolo",
       "Varandinha fresca com rede",
       "Ventiladores de teto nos quartos",
       "Garagem para 2 carros",
       "Cozinha com utensílios completos"
     ],
-    "description": "Casa aconchegante para reunir a família no Réveillon em Cabo Frio. Perto da praia e da feirinha, em local calmo e bem arejado.",
-    "images": [
-      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa aconchegante para reunir a família no Réveillon em Cabo Frio. Areia branca fininha e mar cristalino a poucos passos."
   },
   {
     "id": "22",
     "title": "Chalé Rústico e Acolhedor em Trindade",
     "location": "Paraty, Rio de Janeiro",
-    "distance": "A 100m da Praia do Meio",
+    "distance": "A 90m da Praia do Meio",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 90,
     "originalPrice": 145,
     "discountBadge": "38% OFF · Paraty Réveillon",
-    "rating": 4.93,
-    "reviewCount": 60,
+    "rating": 4.94,
+    "reviewCount": 63,
     "isGuestFavorite": true,
     "category": "rj",
+    "images": [
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Júlio & Clara",
       "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
@@ -860,30 +865,30 @@ export const mockProperties: Property[] = [
     "amenities": [
       "Varanda de madeira com rede sob árvores nativas",
       "Ventiladores e telas protetoras",
-      "Cozinha simples para café da manhã e lanches",
+      "Cozinha simples para café e lanches",
       "Ducha natural externa",
       "Espaço para estacionar 1 carro"
     ],
-    "description": "Chalé rústico na tranquila vila de Trindade. Perto da praia, trilhas leves para a Piscina Natural do Caixa D’Aço e muito contato com a natureza.",
-    "images": [
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Chalé rústico na tranquila vila de pescadores de Trindade em Paraty. Mar limpo e trilhas leves para a Piscina Natural do Caixa D’Aço."
   },
   {
     "id": "23",
-    "title": "Casa Arejada com Varanda Próxima à Praia do Abraão",
+    "title": "Casa Arejada com Varanda na Vila do Abraão",
     "location": "Angra dos Reis, Rio de Janeiro",
     "distance": "Ilha Grande · Vila do Abraão",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 125,
     "originalPrice": 195,
     "discountBadge": "36% OFF · Angra Réveillon",
-    "rating": 4.94,
-    "reviewCount": 75,
+    "rating": 4.95,
+    "reviewCount": 79,
     "isGuestFavorite": true,
     "category": "rj",
+    "images": [
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Capitão Bernardo",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -899,30 +904,30 @@ export const mockProperties: Property[] = [
     "amenities": [
       "Varanda arejada cercada por plantas e coqueiros",
       "Ventiladores e ar-condicionado nos quartos",
-      "Cozinha com geladeira e fogão para refeições caseiras",
+      "Cozinha com geladeira e fogão para refeições",
       "Wi-Fi para comunicação",
       "Chuveiro quente pós-passeio"
     ],
-    "description": "Casa tranquila na mágica Ilha Grande. Sem barulho de trânsito, perfeita para caminhar descalço até a praia e fazer passeios de barco pelas enseadas.",
-    "images": [
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa tranquila na mágica Ilha Grande. Sem barulho de trânsito, perfeita para caminhar descalço até a praia e fazer passeios de barco."
   },
   {
     "id": "24",
-    "title": "Apartamento Confortável e Silencioso a 2 Quadras do Mar",
+    "title": "Apartamento Silencioso a 2 Quadras de Copacabana",
     "location": "Copacabana, Rio de Janeiro",
-    "distance": "A 200m da praia de Copacabana · Posto 4",
+    "distance": "A 180m da praia de Copacabana · Posto 4",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 140,
     "originalPrice": 220,
     "discountBadge": "36% OFF · Réveillon Copacabana",
-    "rating": 4.93,
-    "reviewCount": 140,
+    "rating": 4.94,
+    "reviewCount": 145,
     "isGuestFavorite": true,
     "category": "rj",
+    "images": [
+      "/images/cd084cec-85b6-4f5f-ac08-a83cd5d034db.jpg",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Fernanda Meirelles",
       "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
@@ -936,32 +941,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Apartamento de fundos silencioso e fresco",
+      "Apartamento de fundos muito silencioso e fresco",
       "Ar-condicionado nos dormitórios",
-      "Portaria 24 horas com controle de acesso",
+      "Portaria 24 horas segura",
       "Cozinha equipada com geladeira e micro-ondas",
       "Wi-Fi rápido"
     ],
-    "description": "Excelente ponto de apoio em Copacabana para a noite da virada. Prédio seguro e estritamente residencial, a poucos minutos a pé da queima de fogos.",
-    "images": [
-      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Ponto de apoio seguro em Copacabana para a noite da virada. Prédio residencial a poucos minutos a pé da queima de fogos."
   },
   {
     "id": "25",
     "title": "Casa Rústica e Arejada com Redes na Varanda",
     "location": "Trancoso, Porto Seguro - Bahia",
-    "distance": "A 300m do Quadrado Histórico",
+    "distance": "A 250m do Quadrado Histórico",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 135,
     "originalPrice": 215,
     "discountBadge": "37% OFF · Trancoso Réveillon",
-    "rating": 4.95,
-    "reviewCount": 86,
+    "rating": 4.96,
+    "reviewCount": 89,
     "isGuestFavorite": true,
     "category": "nordeste",
+    "images": [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Maria Clara Bahia",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -978,29 +983,29 @@ export const mockProperties: Property[] = [
       "Varanda de madeira com redes artesanais baianas",
       "Jardim sossegado com mangueiras e coqueiros",
       "Ventiladores e ar-condicionado nos quartos",
-      "Cozinha com fogão a gás e utensílios básicos",
+      "Cozinha com fogão a gás e utensílios",
       "Estacionamento privativo"
     ],
-    "description": "Casa térrea charmosa e tranquila no estilo tradicional de Trancoso. Ambiente simples, muito fresco e acolhedor perto do Quadrado e da Praia dos Coqueiros.",
-    "images": [
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa térrea charmosa no estilo tradicional de Trancoso. Ambiente simples, muito fresco e acolhedor perto do Quadrado e da Praia dos Coqueiros."
   },
   {
     "id": "26",
     "title": "Bangalô Simples e Sossegado no Coqueiral",
     "location": "Praia do Forte, Mata de São João - BA",
-    "distance": "A 150m da praia e piscinas naturais",
+    "distance": "A 120m da praia e piscinas naturais",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 125,
     "originalPrice": 195,
     "discountBadge": "36% OFF · Praia do Forte Réveillon",
-    "rating": 4.92,
-    "reviewCount": 73,
+    "rating": 4.93,
+    "reviewCount": 76,
     "isGuestFavorite": true,
     "category": "nordeste",
+    "images": [
+      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Antônio Peixoto",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
@@ -1014,32 +1019,32 @@ export const mockProperties: Property[] = [
       "baths": 1
     },
     "amenities": [
-      "Varanda sombreada sob coqueiros com rede",
+      "Varanda sob sombra de coqueiro com rede",
       "Ar-condicionado e ventiladores",
       "Cozinha com geladeira duplex e fogão",
       "Vaga privativa para 1 carro",
-      "Wi-Fi para navegação da família"
+      "Wi-Fi para a família"
     ],
-    "description": "Hospedagem agradável e tranquila na Praia do Forte. Próxima às piscinas de corais calminhas, ideal para relaxar e passear na vila.",
-    "images": [
-      "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Hospedagem agradável e tranquila na Praia do Forte. Próxima às piscinas de corais de águas mornas, ideal para relaxar."
   },
   {
     "id": "27",
     "title": "Casa Familiar na Praia de Antunes em Maragogi",
     "location": "Maragogi, Alagoas",
-    "distance": "A 150m da areia da Praia de Antunes",
+    "distance": "A 100m da areia da Praia de Antunes",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 130,
     "originalPrice": 200,
     "discountBadge": "35% OFF · Maragogi Réveillon",
-    "rating": 4.94,
-    "reviewCount": 81,
+    "rating": 4.95,
+    "reviewCount": 84,
     "isGuestFavorite": true,
     "category": "nordeste",
+    "images": [
+      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Larissa Alencar",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -1059,26 +1064,26 @@ export const mockProperties: Property[] = [
       "Espaço interno para 2 carros",
       "Ducha no jardim"
     ],
-    "description": "Casa caseira e confortável pertinho do mar calmo e azul-turquesa de Antunes. Perfeita para quem quer curtir a virada do ano com tranquilidade e praia quente.",
-    "images": [
-      "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa caseira e confortável pertinho do mar calmo e azul-turquesa de Antunes. Perfeita para passar a virada do ano com tranquilidade."
   },
   {
     "id": "28",
-    "title": "Apartamento Confortável a Poucos Passos da Praia",
+    "title": "Apartamento Confortável a 100m das Piscinas Naturais",
     "location": "Porto de Galinhas, Ipojuca - PE",
-    "distance": "A 150m das piscinas naturais da vila",
+    "distance": "A 100m das piscinas naturais da vila",
     "dates": "28 de dez. – 2 de jan.",
     "pricePerNight": 120,
     "originalPrice": 185,
     "discountBadge": "35% OFF · Porto de Galinhas",
-    "rating": 4.91,
-    "reviewCount": 95,
+    "rating": 4.92,
+    "reviewCount": 98,
     "isGuestFavorite": true,
     "category": "nordeste",
+    "images": [
+      "/images/cd084cec-85b6-4f5f-ac08-a83cd5d034db.jpg",
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Henrique Vasconcelos",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
@@ -1095,29 +1100,29 @@ export const mockProperties: Property[] = [
       "Sacada fresca com ventilação natural",
       "Ar-condicionado nos quartos",
       "Estacionamento rotativo no prédio",
-      "Cozinha com utensílios para refeições diárias",
+      "Cozinha com utensílios para refeições",
       "Wi-Fi rápido"
     ],
-    "description": "Acomodação prática e aconchegante em Porto de Galinhas. Dá para ir a pé até as piscinas naturais, feiras de artesanato e restaurantes da vila.",
-    "images": [
-      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Acomodação prática e aconchegante em Porto de Galinhas. Caminhe descalço até as piscinas de corais e quiosques da vila."
   },
   {
     "id": "29",
     "title": "Casa Térrea Arejada com Varanda e Rede em Pipa",
     "location": "Praia da Pipa, Tibau do Sul - RN",
-    "distance": "A 200m da Praia do Centro e Praia do Amor",
+    "distance": "A 180m da Praia do Centro e Praia do Amor",
     "dates": "27 de dez. – 2 de jan.",
     "pricePerNight": 115,
     "originalPrice": 180,
     "discountBadge": "36% OFF · Pipa Réveillon",
-    "rating": 4.93,
-    "reviewCount": 70,
+    "rating": 4.94,
+    "reviewCount": 73,
     "isGuestFavorite": true,
     "category": "nordeste",
+    "images": [
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Sabrina & Daniel",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
@@ -1137,26 +1142,26 @@ export const mockProperties: Property[] = [
       "Vaga para 1 carro no pátio fechado",
       "Cozinha completa"
     ],
-    "description": "Casa aconchegante em rua calma de Pipa. Perto da avenida principal com lojinhas e bares, mas afastada o suficiente para dormir em silêncio absoluto.",
-    "images": [
-      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Casa aconchegante em rua calma de Pipa. Perto da vila, mas longe do barulho para dormir em paz com o som da brisa."
   },
   {
     "id": "30",
     "title": "Chalé Aconchegante na Areia da Vila de Jeri",
     "location": "Jericoacoara, Jijoca - Ceará",
-    "distance": "A 150m da praia e da Duna do Pôr do Sol",
+    "distance": "A 100m da praia e da Duna do Pôr do Sol",
     "dates": "28 de dez. – 3 de jan.",
     "pricePerNight": 130,
     "originalPrice": 200,
     "discountBadge": "35% OFF · Jericoacoara",
-    "rating": 4.95,
-    "reviewCount": 82,
+    "rating": 4.96,
+    "reviewCount": 86,
     "isGuestFavorite": true,
     "category": "nordeste",
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80"
+    ],
     "host": {
       "name": "Mateus Albuquerque",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -1172,15 +1177,10 @@ export const mockProperties: Property[] = [
     "amenities": [
       "Varanda charmosa com esteiras e rede",
       "Ar-condicionado split silencioso",
-      "Chuveiro quente com energia solar",
+      "Chuveiro quente solar",
       "Wi-Fi para conexão",
       "Cafeteira e frigobar"
     ],
-    "description": "Chalé simples, rústico e acolhedor nas ruas de areia de Jeri. Clima de paz e tranquilidade a passos do espetacular pôr do sol nas dunas.",
-    "images": [
-      "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=80"
-    ]
+    "description": "Chalé rústico e acolhedor nas ruas de areia de Jericoacoara. Clima de tranquilidade a passos da praia e do pôr do sol inesquecível."
   }
 ];

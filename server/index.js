@@ -207,8 +207,8 @@ app.post('/api/payments/webhook', (req, res) => {
   res.json({ received: true });
 });
 
-// Fallback SPA: Qualquer rota web entrega o index.html do React
-app.get('*', (req, res) => {
+// Fallback SPA: Qualquer rota web que não seja API entrega o index.html do React
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 

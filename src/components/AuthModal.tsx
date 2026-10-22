@@ -6,6 +6,7 @@ import { authService } from '../services/authService';
 interface AuthModalProps {
   isOpen: boolean;
   initialMode?: 'login' | 'register';
+  bookingNotice?: boolean;
   onClose: () => void;
   onSuccess: (user: User) => void;
 }
@@ -13,6 +14,7 @@ interface AuthModalProps {
 export const AuthModal: React.FC<AuthModalProps> = ({
   isOpen,
   initialMode = 'login',
+  bookingNotice = false,
   onClose,
   onSuccess,
 }) => {
@@ -80,6 +82,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({
           </div>
         ) : (
           <div className="pt-6">
+            {bookingNotice && (
+              <div className="mb-4 p-3 bg-rose-50 border border-rose-200 text-rose-800 rounded-xl text-xs flex items-center gap-2 font-semibold">
+                <span>🔒</span>
+                <span>Faça login ou cadastre-se para concluir e garantir sua reserva.</span>
+              </div>
+            )}
             <h2 className="text-xl font-bold text-neutral-900 mb-2">
               Bem-vindo ao Airbnb
             </h2>

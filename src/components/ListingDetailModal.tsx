@@ -11,12 +11,14 @@ interface ListingDetailModalProps {
   property: Property | null;
   onClose: () => void;
   onStartCheckout: (property: Property, nights: number, totalPrice: number) => void;
+  onOpenChatWithHost?: (property: Property) => void;
 }
 
 export const ListingDetailModal: React.FC<ListingDetailModalProps> = ({
   property,
   onClose,
   onStartCheckout,
+  onOpenChatWithHost,
 }) => {
   if (!property) return null;
 
@@ -86,8 +88,8 @@ export const ListingDetailModal: React.FC<ListingDetailModalProps> = ({
           {/* Main Info */}
           <div className="md:col-span-2 space-y-6">
             {/* Host Section */}
-            <div className="flex items-center justify-between pb-6 border-b border-neutral-200">
-              <div>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-neutral-200">
+              <div className="space-y-1">
                 <h3 className="text-lg font-bold text-neutral-900">
                   Espaço inteiro por {property.host.name}
                 </h3>
@@ -96,6 +98,15 @@ export const ListingDetailModal: React.FC<ListingDetailModalProps> = ({
                   quartos · {property.details.beds} camas · {property.details.baths}{' '}
                   banheiros
                 </p>
+                {onOpenChatWithHost && (
+                  <button
+                    onClick={() => onOpenChatWithHost(property)}
+                    className="mt-2 inline-flex items-center gap-1.5 text-xs font-bold text-[#FF385C] border border-[#FF385C]/30 hover:bg-rose-50 px-3 py-1.5 rounded-xl transition cursor-pointer"
+                  >
+                    <span>💬</span>
+                    <span>Conversar com {property.host.name} no Chat</span>
+                  </button>
+                )}
               </div>
               <img
                 src={property.host.avatar}

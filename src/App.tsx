@@ -12,10 +12,13 @@ import { TripsModal } from './components/TripsModal';
 import { FiltersModal } from './components/FiltersModal';
 import type { FilterOptions } from './components/FiltersModal';
 import { LanguageCurrencyModal } from './components/LanguageCurrencyModal';
+import { LiveChat } from './components/LiveChat';
+import { MobileBottomNav } from './components/MobileBottomNav';
 import { Footer } from './components/Footer';
 import { categories, mockProperties } from './data/mockData';
 import type { Property, SearchFilters } from './types';
 import type { User } from './types/authAndPayment';
+import { MessageSquare } from 'lucide-react';
 
 export default function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -54,12 +57,22 @@ export default function App() {
   });
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authMode, setAuthMode] = useState<'login' | 'register'>('login');
+  const [authBookingNotice, setAuthBookingNotice] = useState(false);
 
   // Estados de Pagamento / Checkout
   const [checkoutModalOpen, setCheckoutModalOpen] = useState(false);
   const [checkoutProperty, setCheckoutProperty] = useState<Property | null>(null);
-  const [checkoutNights, setCheckoutNights] = useState(5);
+  const [checkoutNights, setCheckoutNights] = useState(2);
   const [checkoutTotalPrice, setCheckoutTotalPrice] = useState(0);
+  const [pendingCheckout, setPendingCheckout] = useState<{
+    property: Property;
+    nights: number;
+    totalPrice: number;
+  } | null>(null);
+
+  // Estados de Chat ao Vivo
+  const [chatOpen, setChatOpen] = useState(false);
+  const [chatProperty, setChatProperty] = useState<Property | null>(null);
 
   // Estados de Modais Complementares (Anuncie, Ajuda, Viagens, Filtros, Idioma)
   const [hostModalOpen, setHostModalOpen] = useState(false);
@@ -97,6 +110,16 @@ export default function App() {
   const handleLoginSuccess = (user: User) => {
     setCurrentUser(user);
     localStorage.setItem('airbnb_user', JSON.stringify(user));
+
+    // Se havia uma reserva em andamento bloqueada por falta de login, segue para o checkout
+    if (pendingCheckout) {
+      setCheckoutProperty(pendingCheckout.property);
+      setCheckoutNights(pendingCheckout.nights);
+      setCheckoutTotalPrice(pendingCheckout.totalPrice);
+      setPendingCheckout(null);
+      setAuthBookingNotice(false);
+      setCheckoutModalOpen(true);
+    }
   };
 
   const handleLogout = () => {
@@ -104,12 +127,23 @@ export default function App() {
     localStorage.removeItem('airbnb_user');
   };
 
+  // Trava de segurança: usuário OBRIGATORIAMENTE precisa estar logado para ir ao pagamento
   const handleStartCheckout = (
     property: Property,
     nights: number,
     totalPrice: number
   ) => {
     setSelectedProperty(null);
+
+    if (!currentUser) {
+      // Bloqueia e abre modal de identificação
+      setPendingCheckout({ property, nights, totalPrice });
+      setAuthBookingNotice(true);
+      setAuthMode('login');
+      setAuthModalOpen(true);
+      return;
+    }
+
     setCheckoutProperty(property);
     setCheckoutNights(nights);
     setCheckoutTotalPrice(totalPrice);
@@ -128,6 +162,11 @@ export default function App() {
       };
       setTrips((prev) => [newTrip, ...prev]);
     }
+  };
+
+  const handleOpenChatWithHost = (property: Property) => {
+    setChatProperty(property);
+    setChatOpen(true);
   };
 
   const activeFiltersCount = useMemo(() => {
@@ -190,6 +229,7 @@ export default function App() {
         currentUser={currentUser}
         onSearchClick={() => setShowHero(!showHero)}
         onOpenAuth={(mode) => {
+          setAuthBookingNotice(false);
           setAuthMode(mode);
           setAuthModalOpen(true);
         }}
@@ -218,7 +258,7 @@ export default function App() {
       />
 
       {/* Main Content Listings Grid */}
-      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full pb-24 md:pb-8">
         {/* Banner de Status de Busca ou Favoritos */}
         <div className="mb-6 flex flex-wrap items-center justify-between gap-3">
           <div>
@@ -227,10 +267,10 @@ export default function App() {
                 ? 'Seus Imóveis Favoritos'
                 : searchLocation
                 ? `Acomodações encontradas para "${searchLocation}"`
-                : `${filteredProperties.length} acomodações disponíveis`}
+                : `${filteredProperties.length} acomodações pé na areia e Réveillon`}
             </h2>
             <p className="text-xs text-neutral-500">
-              Mais de 15 destinos incríveis com reservas instantâneas via PIX
+              Destinos exclusivos: Guaratuba, Caiobá, Balneário Camboriú, Bombinhas, Maresias, Ubatuba, Búzios e mais
             </p>
           </div>
 
@@ -295,19 +335,44 @@ export default function App() {
         )}
       </main>
 
+      {/* Floating Chat Button (Desktop & Mobile) */}
+      <button
+        onClick={() => setChatOpen(true)}
+        className="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-30 bg-[#FF385C] hover:bg-[#E00B41] text-white p-3.5 md:px-5 md:py-3 rounded-full shadow-2xl flex items-center gap-2.5 transition transform hover:scale-105 cursor-pointer font-medium text-sm border-2 border-white"
+        title="Falar com o Anfitrião"
+      >
+        <div className="relative">
+          <MessageSquare className="w-5 h-5" />
+          <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-green-400 rounded-full ring-2 ring-white animate-pulse" />
+        </div>
+        <span className="hidden md:inline font-semibold">Chat com Anfitrião</span>
+      </button>
+
       {/* Property Details Modal */}
       <ListingDetailModal
         property={selectedProperty}
         onClose={() => setSelectedProperty(null)}
         onStartCheckout={handleStartCheckout}
+        onOpenChatWithHost={handleOpenChatWithHost}
       />
 
-      {/* Auth Modal (Login / Cadastro) */}
+      {/* Auth Modal (Login / Cadastro Obrigatório antes da Reserva) */}
       <AuthModal
         isOpen={authModalOpen}
         initialMode={authMode}
-        onClose={() => setAuthModalOpen(false)}
+        bookingNotice={authBookingNotice}
+        onClose={() => {
+          setAuthModalOpen(false);
+          setAuthBookingNotice(false);
+        }}
         onSuccess={handleLoginSuccess}
+      />
+
+      {/* Live Chat Modal / Drawer */}
+      <LiveChat
+        isOpen={chatOpen}
+        onClose={() => setChatOpen(false)}
+        activeProperty={chatProperty || selectedProperty}
       />
 
       {/* Checkout Modal (Pagamento 100% PIX Oficial União 7 Pay) */}
@@ -364,6 +429,29 @@ export default function App() {
         onSelectLanguage={setSelectedLanguage}
         onSelectCurrency={setSelectedCurrency}
         onClose={() => setLangCurrModalOpen(false)}
+      />
+
+      {/* Mobile Bottom Navigation Bar */}
+      <MobileBottomNav
+        currentUser={currentUser}
+        favoritesCount={favorites.length}
+        onExplore={() => {
+          setShowOnlyFavorites(false);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        onOpenFavorites={() => setShowOnlyFavorites((prev) => !prev)}
+        onOpenTrips={() => setTripsModalOpen(true)}
+        onOpenChat={() => setChatOpen(true)}
+        onOpenAuth={() => {
+          if (!currentUser) {
+            setAuthBookingNotice(false);
+            setAuthMode('login');
+            setAuthModalOpen(true);
+          } else {
+            setTripsModalOpen(true);
+          }
+        }}
+        activeTab={showOnlyFavorites ? 'favorites' : 'explore'}
       />
 
       {/* Footer com todos os links funcionais */}

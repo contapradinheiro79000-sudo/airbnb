@@ -184,9 +184,29 @@ export default function App() {
       if (showOnlyFavorites && !favorites.includes(item.id)) {
         return false;
       }
-      // Filtro de Categoria
-      const matchesCategory =
-        selectedCategory === 'all' || item.category === selectedCategory;
+      // Filtro de Categoria Inteligente
+      let matchesCategory = true;
+      if (selectedCategory === 'all') {
+        matchesCategory = true;
+      } else if (selectedCategory === 'beach') {
+        matchesCategory = true; // Todas as 30 acomodações são de praia
+      } else if (selectedCategory === 'pools') {
+        matchesCategory =
+          item.title.toLowerCase().includes('piscina') ||
+          item.amenities.some((a) => a.toLowerCase().includes('piscina') || a.toLowerCase().includes('jacuzzi'));
+      } else if (selectedCategory === 'parana') {
+        matchesCategory = item.category === 'parana' || item.location.includes('Paraná');
+      } else if (selectedCategory === 'sc') {
+        matchesCategory = item.category === 'sc' || item.location.includes('Santa Catarina');
+      } else if (selectedCategory === 'sp') {
+        matchesCategory = item.category === 'sp' || item.location.includes('São Paulo') || item.location.includes('- SP');
+      } else if (selectedCategory === 'rj') {
+        matchesCategory = item.category === 'rj' || item.location.includes('Rio de Janeiro');
+      } else if (selectedCategory === 'nordeste') {
+        matchesCategory = item.category === 'nordeste' || ['Bahia', 'Alagoas', 'Pernambuco', 'Rio Grande do Norte', 'Ceará'].some(st => item.location.includes(st));
+      } else {
+        matchesCategory = item.category === selectedCategory;
+      }
 
       // Filtro de Busca (Localização / Título)
       const matchesLocation =

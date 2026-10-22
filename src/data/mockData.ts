@@ -25,11 +25,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 78,
     "isGuestFavorite": true,
     "category": "parana",
-    "images": [
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555.jpg",
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_1.jpg",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Eduardo Guimarães",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
@@ -50,7 +45,12 @@ export const mockProperties: Property[] = [
       "Estacionamento para 3 carros",
       "Duchão externo pós-praia"
     ],
-    "description": "Casa de praia agradável e bem arejada na Praia Central de Guaratuba. Espaço perfeito para a família passar a virada do ano com tranquilidade a poucos passos do mar."
+    "description": "Casa de praia agradável e bem arejada na Praia Central de Guaratuba. Espaço perfeito para a família passar a virada do ano com tranquilidade a poucos passos do mar.",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_1.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_7.jpg"
+    ]
   },
   {
     "id": "2",
@@ -65,11 +65,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 65,
     "isGuestFavorite": true,
     "category": "parana",
-    "images": [
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_7.jpg",
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_8.jpg",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Mariana Rocha",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -89,7 +84,12 @@ export const mockProperties: Property[] = [
       "Garagem fechada para 2 carros",
       "Cadeiras de praia inclusas"
     ],
-    "description": "Sobrado fresco e bem cuidado no Brejatuba. Bairro calmo, ideal para caminhar até a praia e assistir aos fogos na orla de Guaratuba."
+    "description": "Sobrado fresco e bem cuidado no Brejatuba. Bairro calmo, ideal para caminhar até a praia e assistir aos fogos na orla de Guaratuba.",
+    "images": [
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_8.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_9.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_10.jpg"
+    ]
   },
   {
     "id": "3",
@@ -104,11 +104,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 59,
     "isGuestFavorite": true,
     "category": "parana",
-    "images": [
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_9.jpg",
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_10.jpg",
-      "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Regina Célia",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -128,7 +123,12 @@ export const mockProperties: Property[] = [
       "Vaga interna para 2 veículos",
       "Ducha no quintal"
     ],
-    "description": "Casa térrea acolhedora em Matinhos. Rua tranquila de moradores, ambiente seguro e familiar perto da orla revitalizada."
+    "description": "Casa térrea acolhedora em Matinhos. Rua tranquila de moradores, ambiente seguro e familiar perto da orla revitalizada.",
+    "images": [
+      "/images/cd084cec-85b6-4f5f-ac08-a83cd5d034db.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_5.jpg",
+      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_2.jpg"
+    ]
   },
   {
     "id": "4",
@@ -143,11 +143,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 94,
     "isGuestFavorite": true,
     "category": "parana",
-    "images": [
-      "/images/cd084cec-85b6-4f5f-ac08-a83cd5d034db.jpg",
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_5.jpg",
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Carlos Alberto Siqueira",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
@@ -167,7 +162,12 @@ export const mockProperties: Property[] = [
       "Cozinha com micro-ondas e cafeteira",
       "Prédio familiar sossegado"
     ],
-    "description": "Localização privilegiada na Praia Mansa de Caiobá. Perfeito para famílias com crianças, águas calmas sem ondas fortes e fácil acesso a pé."
+    "description": "Localização privilegiada na Praia Mansa de Caiobá. Perfeito para famílias com crianças, águas calmas sem ondas fortes e fácil acesso a pé.",
+    "images": [
+      "/images/fb474f75-7020-45bc-a11c-2a683b5d3c34.png",
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "5",
@@ -182,11 +182,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 68,
     "isGuestFavorite": true,
     "category": "parana",
-    "images": [
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Tiago & Bruna",
       "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
@@ -206,7 +201,12 @@ export const mockProperties: Property[] = [
       "Cozinha compacta para café e lanches",
       "Chuveiro quente a gás"
     ],
-    "description": "Chalé autêntico na mágica Ilha do Mel. Sem carros e sem barulho, caminho de areia até a praia e contato puro com a natureza preservada."
+    "description": "Chalé autêntico na mágica Ilha do Mel. Sem carros e sem barulho, caminho de areia até a praia e contato puro com a natureza preservada.",
+    "images": [
+      "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "6",
@@ -221,11 +221,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 112,
     "isGuestFavorite": true,
     "category": "sc",
-    "images": [
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_2.jpg",
-      "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Felipe Zanella",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
@@ -245,7 +240,12 @@ export const mockProperties: Property[] = [
       "Wi-Fi e TV na sala",
       "Portaria 24 horas"
     ],
-    "description": "Apartamento confortável e sem luxos desnecessários em Balneário Camboriú. Dá para fazer tudo a pé até a praia e curtir a virada do ano com economia."
+    "description": "Apartamento confortável e sem luxos desnecessários em Balneário Camboriú. Dá para fazer tudo a pé até a praia e curtir a virada do ano com economia.",
+    "images": [
+      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "7",
@@ -260,11 +260,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 86,
     "isGuestFavorite": true,
     "category": "sc",
-    "images": [
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Luciana & Marcelo",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -284,7 +279,12 @@ export const mockProperties: Property[] = [
       "Vaga para 2 carros",
       "Duchão externo pós-mar"
     ],
-    "description": "Casa tranquila em Bombinhas, pertinho do mar cristalino de Quatro Ilhas e das trilhas ecológicas. Ideal para descanso em família."
+    "description": "Casa tranquila em Bombinhas, pertinho do mar cristalino de Quatro Ilhas e das trilhas ecológicas. Ideal para descanso em família.",
+    "images": [
+      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "8",
@@ -299,11 +299,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 54,
     "isGuestFavorite": true,
     "category": "sc",
-    "images": [
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Gabriel Becker",
       "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80",
@@ -323,7 +318,12 @@ export const mockProperties: Property[] = [
       "Vaga privativa para carro",
       "Cadeiras de praia e guarda-sol"
     ],
-    "description": "Chalé simples, limpo e prático pertinho da areia branca de Mariscal. Clima de paz e simplicidade para curtir a virada do ano sem estresse."
+    "description": "Chalé simples, limpo e prático pertinho da areia branca de Mariscal. Clima de paz e simplicidade para curtir a virada do ano sem estresse.",
+    "images": [
+      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "9",
@@ -338,11 +338,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 82,
     "isGuestFavorite": true,
     "category": "sc",
-    "images": [
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Renata D’Ávila",
       "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
@@ -362,7 +357,12 @@ export const mockProperties: Property[] = [
       "Estacionamento para 2 carros",
       "Cozinha com fogão e geladeira"
     ],
-    "description": "Casa térrea acolhedora no sul da ilha de Florianópolis. Bairro tranquilo, perto da praia e dos barcos para a Ilha do Campeche."
+    "description": "Casa térrea acolhedora no sul da ilha de Florianópolis. Bairro tranquilo, perto da praia e dos barcos para a Ilha do Campeche.",
+    "images": [
+      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "10",
@@ -377,11 +377,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 67,
     "isGuestFavorite": true,
     "category": "sc",
-    "images": [
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Diego Fontana",
       "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
@@ -401,7 +396,12 @@ export const mockProperties: Property[] = [
       "Wi-Fi para a família",
       "Cozinha com geladeira e fogão"
     ],
-    "description": "Hospedagem confortável no norte de Florianópolis. Mar calmo e quentinho, perfeito para caminhadas e lazer com as crianças."
+    "description": "Hospedagem confortável no norte de Florianópolis. Mar calmo e quentinho, perfeito para caminhadas e lazer com as crianças.",
+    "images": [
+      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "11",
@@ -416,11 +416,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 74,
     "isGuestFavorite": true,
     "category": "sc",
-    "images": [
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Patrícia Vianna",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -440,7 +435,12 @@ export const mockProperties: Property[] = [
       "Pátio para estacionar carro",
       "Cozinha com fogão e utensílios básicos"
     ],
-    "description": "Estilo autêntico praiano de Garopaba. Sem luxo, com muita paz, natureza e frescor para aproveitar a Praia da Ferrugem."
+    "description": "Estilo autêntico praiano de Garopaba. Sem luxo, com muita paz, natureza e frescor para aproveitar a Praia da Ferrugem.",
+    "images": [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "12",
@@ -455,11 +455,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 91,
     "isGuestFavorite": true,
     "category": "sc",
-    "images": [
-      "/images/fb474f75-7020-45bc-a11c-2a683b5d3c34.png",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Valter Simon",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -479,7 +474,12 @@ export const mockProperties: Property[] = [
       "Edifício familiar com elevador",
       "Wi-Fi e TV"
     ],
-    "description": "Excelente custo-benefício em Itapema. Prédio tranquilo, perto da praia, padarias, farmácias e do calçadão."
+    "description": "Excelente custo-benefício em Itapema. Prédio tranquilo, perto da praia, padarias, farmácias e do calçadão.",
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "13",
@@ -494,11 +494,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 85,
     "isGuestFavorite": true,
     "category": "sp",
-    "images": [
-      "https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Gustavo Mendonça",
       "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&w=200&q=80",
@@ -518,7 +513,12 @@ export const mockProperties: Property[] = [
       "Estacionamento para 2 carros",
       "Ducha externa no jardim"
     ],
-    "description": "Casa aconchegante cercada por vegetação tropical em Maresias. Local sossegado e seguro para desfrutar o verão com a família."
+    "description": "Casa aconchegante cercada por vegetação tropical em Maresias. Local sossegado e seguro para desfrutar o verão com a família.",
+    "images": [
+      "https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "14",
@@ -533,11 +533,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 97,
     "isGuestFavorite": true,
     "category": "sp",
-    "images": [
-      "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Ana Cláudia Fontes",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
@@ -557,7 +552,12 @@ export const mockProperties: Property[] = [
       "Garagem fechada para 2 carros",
       "Cozinha com geladeira duplex"
     ],
-    "description": "Casa prática e espaçosa em Ubatuba. Rua com moradores, perto dos quiosques e das praias do Tenório e Praia Grande."
+    "description": "Casa prática e espaçosa em Ubatuba. Rua com moradores, perto dos quiosques e das praias do Tenório e Praia Grande.",
+    "images": [
+      "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "15",
@@ -572,11 +572,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 92,
     "isGuestFavorite": true,
     "category": "sp",
-    "images": [
-      "https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Leonardo & Sofia",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
@@ -596,7 +591,12 @@ export const mockProperties: Property[] = [
       "Vaga para carro no terreno",
       "Cozinha compacta equipada"
     ],
-    "description": "Chalé sossegado em Ilhabela, perfeito para desconectar da rotina e descansar com os sons da natureza e do mar."
+    "description": "Chalé sossegado em Ilhabela, perfeito para desconectar da rotina e descansar com os sons da natureza e do mar.",
+    "images": [
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "16",
@@ -611,11 +611,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 105,
     "isGuestFavorite": true,
     "category": "sp",
-    "images": [
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555.jpg",
-      "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Beatriz Almeida",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -635,7 +630,12 @@ export const mockProperties: Property[] = [
       "Cozinha montada para refeições caseiras",
       "Perto de tudo: feira, padaria e praia"
     ],
-    "description": "Acomodação familiar no centro de Pitangueiras no Guarujá. Esqueça o carro na garagem e faça tudo a pé até a areia."
+    "description": "Acomodação familiar no centro de Pitangueiras no Guarujá. Esqueça o carro na garagem e faça tudo a pé até a areia.",
+    "images": [
+      "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "17",
@@ -650,11 +650,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 71,
     "isGuestFavorite": true,
     "category": "sp",
-    "images": [
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Rodrigo Paes",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
@@ -674,7 +669,12 @@ export const mockProperties: Property[] = [
       "Vaga interna para 2 veículos",
       "Ducha externa pós-praia"
     ],
-    "description": "Casa tranquila em Juquehy para desfrutar o verão em família. Praia com águas limpas e infraestrutura excelente para caminhar."
+    "description": "Casa tranquila em Juquehy para desfrutar o verão em família. Praia com águas limpas e infraestrutura excelente para caminhar.",
+    "images": [
+      "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "18",
@@ -689,11 +689,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 77,
     "isGuestFavorite": true,
     "category": "sp",
-    "images": [
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_7.jpg",
-      "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Camila Mattos",
       "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
@@ -713,7 +708,12 @@ export const mockProperties: Property[] = [
       "Garagem fechada para 2 carros",
       "Cozinha com utensílios e geladeira"
     ],
-    "description": "Excelente opção econômica em Bertioga. Quintal seguro para crianças brincarem e proximidade da praia e do canal."
+    "description": "Excelente opção econômica em Bertioga. Quintal seguro para crianças brincarem e proximidade da praia e do canal.",
+    "images": [
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "19",
@@ -728,11 +728,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 99,
     "isGuestFavorite": true,
     "category": "rj",
-    "images": [
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Marcelle Dupont",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -752,7 +747,12 @@ export const mockProperties: Property[] = [
       "Vaga para 2 carros no terreno",
       "Wi-Fi e cozinha equipada"
     ],
-    "description": "Casa aconchegante e cheia de estilo descontraído em Geribá. Rua sem saída super calma, ideal para descansar depois de curtir a praia."
+    "description": "Casa aconchegante e cheia de estilo descontraído em Geribá. Rua sem saída super calma, ideal para descansar depois de curtir a praia.",
+    "images": [
+      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "20",
@@ -767,11 +767,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 91,
     "isGuestFavorite": true,
     "category": "rj",
-    "images": [
-      "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Thiago Nogueira",
       "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
@@ -791,7 +786,12 @@ export const mockProperties: Property[] = [
       "Vaga de garagem privativa",
       "Cozinha com geladeira e fogão"
     ],
-    "description": "Casa fresca e tranquila em Arraial do Cabo. Fácil acesso à água turquesa da Prainha e aos barcos para as praias do Farol e Forno."
+    "description": "Casa fresca e tranquila em Arraial do Cabo. Fácil acesso à água turquesa da Prainha e aos barcos para as praias do Farol e Forno.",
+    "images": [
+      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "21",
@@ -806,11 +806,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 84,
     "isGuestFavorite": true,
     "category": "rj",
-    "images": [
-      "/images/c8ba7316-48cc-407c-bbad-04116ff2c555_9.jpg",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Marilena Costa",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -830,7 +825,12 @@ export const mockProperties: Property[] = [
       "Garagem para 2 carros",
       "Cozinha com utensílios completos"
     ],
-    "description": "Casa aconchegante para reunir a família no Réveillon em Cabo Frio. Areia branca fininha e mar cristalino a poucos passos."
+    "description": "Casa aconchegante para reunir a família no Réveillon em Cabo Frio. Areia branca fininha e mar cristalino a poucos passos.",
+    "images": [
+      "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "22",
@@ -845,11 +845,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 63,
     "isGuestFavorite": true,
     "category": "rj",
-    "images": [
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Júlio & Clara",
       "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200&q=80",
@@ -869,7 +864,12 @@ export const mockProperties: Property[] = [
       "Ducha natural externa",
       "Espaço para estacionar 1 carro"
     ],
-    "description": "Chalé rústico na tranquila vila de pescadores de Trindade em Paraty. Mar limpo e trilhas leves para a Piscina Natural do Caixa D’Aço."
+    "description": "Chalé rústico na tranquila vila de pescadores de Trindade em Paraty. Mar limpo e trilhas leves para a Piscina Natural do Caixa D’Aço.",
+    "images": [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1470246973918-29a93221c455?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "23",
@@ -884,11 +884,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 79,
     "isGuestFavorite": true,
     "category": "rj",
-    "images": [
-      "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Capitão Bernardo",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -908,7 +903,12 @@ export const mockProperties: Property[] = [
       "Wi-Fi para comunicação",
       "Chuveiro quente pós-passeio"
     ],
-    "description": "Casa tranquila na mágica Ilha Grande. Sem barulho de trânsito, perfeita para caminhar descalço até a praia e fazer passeios de barco."
+    "description": "Casa tranquila na mágica Ilha Grande. Sem barulho de trânsito, perfeita para caminhar descalço até a praia e fazer passeios de barco.",
+    "images": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "24",
@@ -923,11 +923,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 145,
     "isGuestFavorite": true,
     "category": "rj",
-    "images": [
-      "/images/cd084cec-85b6-4f5f-ac08-a83cd5d034db.jpg",
-      "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Fernanda Meirelles",
       "avatar": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
@@ -947,7 +942,12 @@ export const mockProperties: Property[] = [
       "Cozinha equipada com geladeira e micro-ondas",
       "Wi-Fi rápido"
     ],
-    "description": "Ponto de apoio seguro em Copacabana para a noite da virada. Prédio residencial a poucos minutos a pé da queima de fogos."
+    "description": "Ponto de apoio seguro em Copacabana para a noite da virada. Prédio residencial a poucos minutos a pé da queima de fogos.",
+    "images": [
+      "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "25",
@@ -962,11 +962,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 89,
     "isGuestFavorite": true,
     "category": "nordeste",
-    "images": [
-      "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Maria Clara Bahia",
       "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
@@ -986,7 +981,12 @@ export const mockProperties: Property[] = [
       "Cozinha com fogão a gás e utensílios",
       "Estacionamento privativo"
     ],
-    "description": "Casa térrea charmosa no estilo tradicional de Trancoso. Ambiente simples, muito fresco e acolhedor perto do Quadrado e da Praia dos Coqueiros."
+    "description": "Casa térrea charmosa no estilo tradicional de Trancoso. Ambiente simples, muito fresco e acolhedor perto do Quadrado e da Praia dos Coqueiros.",
+    "images": [
+      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "26",
@@ -1001,11 +1001,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 76,
     "isGuestFavorite": true,
     "category": "nordeste",
-    "images": [
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1513584684374-8bab748fbf90?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Antônio Peixoto",
       "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
@@ -1025,7 +1020,12 @@ export const mockProperties: Property[] = [
       "Vaga privativa para 1 carro",
       "Wi-Fi para a família"
     ],
-    "description": "Hospedagem agradável e tranquila na Praia do Forte. Próxima às piscinas de corais de águas mornas, ideal para relaxar."
+    "description": "Hospedagem agradável e tranquila na Praia do Forte. Próxima às piscinas de corais de águas mornas, ideal para relaxar.",
+    "images": [
+      "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "27",
@@ -1040,11 +1040,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 84,
     "isGuestFavorite": true,
     "category": "nordeste",
-    "images": [
-      "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Larissa Alencar",
       "avatar": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80",
@@ -1064,7 +1059,12 @@ export const mockProperties: Property[] = [
       "Espaço interno para 2 carros",
       "Ducha no jardim"
     ],
-    "description": "Casa caseira e confortável pertinho do mar calmo e azul-turquesa de Antunes. Perfeita para passar a virada do ano com tranquilidade."
+    "description": "Casa caseira e confortável pertinho do mar calmo e azul-turquesa de Antunes. Perfeita para passar a virada do ano com tranquilidade.",
+    "images": [
+      "https://images.unsplash.com/photo-1537047902294-62a40c20a6ae?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "28",
@@ -1079,11 +1079,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 98,
     "isGuestFavorite": true,
     "category": "nordeste",
-    "images": [
-      "/images/cd084cec-85b6-4f5f-ac08-a83cd5d034db.jpg",
-      "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Henrique Vasconcelos",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
@@ -1103,7 +1098,12 @@ export const mockProperties: Property[] = [
       "Cozinha com utensílios para refeições",
       "Wi-Fi rápido"
     ],
-    "description": "Acomodação prática e aconchegante em Porto de Galinhas. Caminhe descalço até as piscinas de corais e quiosques da vila."
+    "description": "Acomodação prática e aconchegante em Porto de Galinhas. Caminhe descalço até as piscinas de corais e quiosques da vila.",
+    "images": [
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "29",
@@ -1118,11 +1118,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 73,
     "isGuestFavorite": true,
     "category": "nordeste",
-    "images": [
-      "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Sabrina & Daniel",
       "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80",
@@ -1142,7 +1137,12 @@ export const mockProperties: Property[] = [
       "Vaga para 1 carro no pátio fechado",
       "Cozinha completa"
     ],
-    "description": "Casa aconchegante em rua calma de Pipa. Perto da vila, mas longe do barulho para dormir em paz com o som da brisa."
+    "description": "Casa aconchegante em rua calma de Pipa. Perto da vila, mas longe do barulho para dormir em paz com o som da brisa.",
+    "images": [
+      "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80"
+    ]
   },
   {
     "id": "30",
@@ -1157,11 +1157,6 @@ export const mockProperties: Property[] = [
     "reviewCount": 86,
     "isGuestFavorite": true,
     "category": "nordeste",
-    "images": [
-      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80"
-    ],
     "host": {
       "name": "Mateus Albuquerque",
       "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
@@ -1181,6 +1176,11 @@ export const mockProperties: Property[] = [
       "Wi-Fi para conexão",
       "Cafeteira e frigobar"
     ],
-    "description": "Chalé rústico e acolhedor nas ruas de areia de Jericoacoara. Clima de tranquilidade a passos da praia e do pôr do sol inesquecível."
+    "description": "Chalé rústico e acolhedor nas ruas de areia de Jericoacoara. Clima de tranquilidade a passos da praia e do pôr do sol inesquecível.",
+    "images": [
+      "https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80"
+    ]
   }
 ];

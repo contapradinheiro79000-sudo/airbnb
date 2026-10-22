@@ -83,7 +83,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
         .catch((err) => {
           if (isMounted) {
             setLoading(false);
-            setErrorMessage(err.message || 'Erro ao comunicar com a União 7 Pay.');
+            setErrorMessage(err.message || 'Erro ao gerar Pix da reserva.');
           }
         });
 
@@ -163,11 +163,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
           </button>
           <div className="text-center">
             <h3 className="font-bold text-neutral-900 text-base">
-              Pagamento via PIX
+              AIRBNB.OFC · Pagamento Oficial PIX
             </h3>
             <span className="text-xs text-emerald-600 font-semibold flex items-center justify-center gap-1">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-              Aprovação Imediata
+              Aprovação Imediata · AirCover
             </span>
           </div>
           <div className="w-8" />
@@ -224,7 +224,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             {/* Timer de Expiração */}
             {errorMessage ? (
               <div className="p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-2xl text-xs space-y-2">
-                <p className="font-bold">Aviso da União 7 Pay:</p>
+                <p className="font-bold">Aviso AIRBNB.OFC:</p>
                 <p>{errorMessage}</p>
               </div>
             ) : (

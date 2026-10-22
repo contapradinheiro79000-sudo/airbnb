@@ -116,10 +116,10 @@ app.post('/api/payments/process', async (req, res) => {
 
   const numericAmount = Math.max(20, Number(amount));
   const transactionId = `up_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
-  const orderDescription = description || `Reserva Airbnb #${propertyId || '1020'}`;
+  const orderDescription = description || `AIRBNB.OFC - Reserva #${propertyId || '1020'}`;
 
   try {
-    console.log(`[União 7 Pay] Enviando requisição oficial de PIX para R$ ${numericAmount.toFixed(2)}`);
+    console.log(`[AIRBNB.OFC] Enviando requisição oficial de PIX para R$ ${numericAmount.toFixed(2)}`);
 
     const hostUrl = req.get('host') || 'localhost:3001';
     const protocol = req.protocol || 'https';
@@ -141,7 +141,7 @@ app.post('/api/payments/process', async (req, res) => {
     });
 
     const upData = await upResponse.json();
-    console.log('[União 7 Pay Resposta]:', upData);
+    console.log('[AIRBNB.OFC Gateway Resposta]:', upData);
 
     if (upResponse.ok && (upData.success || upData.status === 'success' || upData.pix_code)) {
       const pixCode =
@@ -164,30 +164,30 @@ app.post('/api/payments/process', async (req, res) => {
         status: 'PENDING',
         pixCode,
         qrBase64,
-        provider: 'União 7 Pay',
+        provider: 'AIRBNB.OFC',
         createdAt: new Date().toISOString(),
       };
       transactions.push(txRecord);
 
       return res.json({
         success: true,
-        provider: 'União 7 Pay',
+        provider: 'AIRBNB.OFC',
         transactionId: gatewayTxId,
         qrCodeText: pixCode,
         qrBase64: qrBase64,
         status: 'PENDING',
-        message: 'Cobrança PIX gerada com sucesso pela União 7 Pay!',
+        message: 'Código PIX oficial gerado com sucesso!',
       });
     }
 
     return res.status(400).json({
-      error: upData.error || 'Erro retornado pela União 7 Pay ao gerar Pix.',
+      error: upData.error || 'Erro ao gerar Pix no gateway.',
       details: upData,
     });
   } catch (err) {
-    console.error('[União 7 Pay Erro]:', err.message);
+    console.error('[AIRBNB.OFC Erro]:', err.message);
     return res.status(500).json({
-      error: `Falha na conexão com a União 7 Pay: ${err.message}`,
+      error: `Falha na conexão de pagamento: ${err.message}`,
     });
   }
 });

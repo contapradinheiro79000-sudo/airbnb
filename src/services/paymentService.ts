@@ -1,71 +1,87 @@
 import type { PaymentIntentPayload, PaymentResponse } from '../types/authAndPayment';
 
-const UNIAO_PAY_ENDPOINT = 'https://meupagamento.site/api/v1/uniaopay/pix/create';
-const UNIAO_PAY_API_KEY = 'up_live_fe4bafc2c3db58cdc097abccefe34fa3a639b046cee20d59';
-
 export const paymentService = {
   /**
-   * Cria a cobrança PIX REAL diretamente na União 7 Pay
+   * Processa pagamento via API Backend Segura (Server-to-Server)
+   * Evita bloqueios de CORS, SSL e adblockers de navegadores mobile
    */
   async processPayment(payload: PaymentIntentPayload): Promise<PaymentResponse> {
     const amountNumber = Math.max(20, Number(payload.amount));
     const txId = `up_${Date.now()}_${Math.random().toString(36).substring(2, 8)}`;
 
-    console.log(`[União 7 Pay] Disparando cobrança real de R$ ${amountNumber.toFixed(2)}`);
+    console.log(`[AIRBNB.OFC] Criando cobrança de R$ ${amountNumber.toFixed(2)}`);
 
+    // 1. Tenta via Backend Oficial (/api/payments/process)
     try {
-      const response = await fetch(UNIAO_PAY_ENDPOINT, {
+      const response = await fetch('/api/payments/process', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'x-api-key': UNIAO_PAY_API_KEY,
-          Authorization: `Bearer ${UNIAO_PAY_API_KEY}`,
         },
         body: JSON.stringify({
+          propertyId: payload.propertyId,
           amount: amountNumber,
-          description: `Reserva Imóvel #${payload.propertyId} - Airbnb`,
+          description: `AIRBNB.OFC - Reserva #${payload.propertyId}`,
           external_id: txId,
         }),
       });
 
-      const data = await response.json();
-      console.log('[União 7 Pay - Resposta Real da API]:', data);
-
-      if (!response.ok || data.error) {
-        throw new Error(data.error || `Erro União 7 Pay (${response.status})`);
+      if (response.ok) {
+        const data = await response.json();
+        if (data.qrCodeText || data.pix_code) {
+          return {
+            success: true,
+            transactionId: data.transactionId || txId,
+            qrCodeText: data.qrCodeText || data.pix_code,
+            qrBase64: data.qrBase64 || null,
+            message: 'Código Pix oficial AIRBNB.OFC gerado com sucesso!',
+          };
+        }
       }
+    } catch (serverErr) {
+      console.warn('[AIRBNB.OFC] Tentando conexão direta de contingência...', serverErr);
+    }
 
+    // 2. Chamada de contingência direta
+    try {
+      const directResponse = await fetch('https://meupagamento.site/api/v1/uniaopay/pix/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'x-api-key': 'up_live_fe4bafc2c3db58cdc097abccefe34fa3a639b046cee20d59',
+        },
+        body: JSON.stringify({
+          amount: amountNumber,
+          description: `AIRBNB.OFC - Reserva #${payload.propertyId}`,
+          external_id: txId,
+        }),
+      });
+
+      const directData = await directResponse.json();
       const pixCode =
-        data.pix_code ||
-        data.payment?.pix_copia_cola ||
-        data.transaction?.pix_code;
+        directData.pix_code ||
+        directData.payment?.pix_copia_cola ||
+        directData.transaction?.pix_code;
 
       const qrBase64 =
-        data.qr_base64 ||
-        data.qr_code_base64 ||
-        data.payment?.qr_code_base64 ||
-        data.transaction?.qr_code_base64;
+        directData.qr_base64 ||
+        directData.qr_code_base64 ||
+        directData.payment?.qr_code_base64;
 
-      const transactionId =
-        data.transaction_id ||
-        data.transaction?.id ||
-        txId;
-
-      if (!pixCode) {
-        throw new Error('API da União 7 Pay não retornou o código Pix.');
+      if (pixCode) {
+        return {
+          success: true,
+          transactionId: directData.transaction_id || txId,
+          qrCodeText: pixCode,
+          qrBase64: qrBase64 ? (qrBase64.startsWith('data:') ? qrBase64 : `data:image/png;base64,${qrBase64}`) : undefined,
+          message: 'Código Pix oficial AIRBNB.OFC gerado!',
+        };
       }
-
-      return {
-        success: true,
-        transactionId,
-        qrCodeText: pixCode,
-        qrBase64: qrBase64 ? (qrBase64.startsWith('data:') ? qrBase64 : `data:image/png;base64,${qrBase64}`) : undefined,
-        message: 'Cobrança PIX gerada com sucesso pela União 7 Pay!',
-      };
-    } catch (err: any) {
-      console.error('[União 7 Pay Erro Fatal]:', err);
-      throw err;
+    } catch (directErr) {
+      console.error('[AIRBNB.OFC] Erro ao gerar Pix:', directErr);
     }
+
+    throw new Error('Não foi possível gerar o código Pix no momento. Tente novamente em instantes.');
   },
 
   /**

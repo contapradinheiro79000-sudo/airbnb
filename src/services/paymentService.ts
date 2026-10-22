@@ -27,6 +27,7 @@ export const paymentService = {
         success: data.success,
         transactionId: data.transactionId,
         qrCodeText: data.qrCodeText,
+        qrBase64: data.qrBase64 || null,
         message: data.message || 'Transação processada com sucesso.',
       };
     } catch (err: any) {

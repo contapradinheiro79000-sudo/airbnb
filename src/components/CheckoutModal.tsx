@@ -58,7 +58,9 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               transactionId: res.transactionId,
             });
 
-            if (res.qrCodeText) {
+            if (res.qrBase64) {
+              setQrCodeDataUrl(res.qrBase64);
+            } else if (res.qrCodeText) {
               try {
                 const url = await QRCode.toDataURL(res.qrCodeText, {
                   width: 320,
@@ -94,6 +96,28 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     }, 1000);
     return () => clearInterval(timer);
   }, [isOpen, timeLeft]);
+
+  // Polling automático para verificar se o Pix foi pago na União 7 Pay
+  useEffect(() => {
+    if (!isOpen || !pixData?.transactionId || paymentSuccess) return;
+
+    const interval = setInterval(async () => {
+      try {
+        const res = await paymentService.getStatus(pixData.transactionId!);
+        if (res.status === 'PAID') {
+          setPaymentSuccess(true);
+          setTimeout(() => {
+            onSuccess();
+            onClose();
+          }, 2500);
+        }
+      } catch {
+        // ignora erro de polling
+      }
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, [isOpen, pixData?.transactionId, paymentSuccess, onSuccess, onClose]);
 
   if (!isOpen || !property) return null;
 

@@ -5,14 +5,17 @@ import type { Property } from '../types';
 interface ListingCardProps {
   property: Property;
   onSelect: (property: Property) => void;
+  isFavorite?: boolean;
+  onToggleFavorite?: (e: React.MouseEvent) => void;
 }
 
 export const ListingCard: React.FC<ListingCardProps> = ({
   property,
   onSelect,
+  isFavorite = false,
+  onToggleFavorite,
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isFavorite, setIsFavorite] = useState(false);
 
   const nextImage = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -26,9 +29,11 @@ export const ListingCard: React.FC<ListingCardProps> = ({
     );
   };
 
-  const toggleFavorite = (e: React.MouseEvent) => {
+  const handleFavoriteClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setIsFavorite(!isFavorite);
+    if (onToggleFavorite) {
+      onToggleFavorite(e);
+    }
   };
 
   return (
@@ -60,8 +65,8 @@ export const ListingCard: React.FC<ListingCardProps> = ({
 
         {/* Favorite Heart Button */}
         <button
-          onClick={toggleFavorite}
-          className="absolute top-3 right-3 p-1.5 rounded-full hover:scale-110 transition active:scale-95"
+          onClick={handleFavoriteClick}
+          className="absolute top-3 right-3 p-1.5 rounded-full hover:scale-110 transition active:scale-95 cursor-pointer"
         >
           <Heart
             className={`w-6 h-6 stroke-white stroke-2 ${

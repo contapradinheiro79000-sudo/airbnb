@@ -17,6 +17,8 @@ interface CategoryBarProps {
   categories: Category[];
   selectedCategory: string;
   onSelectCategory: (id: string) => void;
+  onOpenFilters: () => void;
+  activeFilterCount?: number;
 }
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -35,6 +37,8 @@ export const CategoryBar: React.FC<CategoryBarProps> = ({
   categories,
   selectedCategory,
   onSelectCategory,
+  onOpenFilters,
+  activeFilterCount = 0,
 }) => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-4 flex items-center justify-between gap-4">
@@ -60,9 +64,17 @@ export const CategoryBar: React.FC<CategoryBarProps> = ({
       </div>
 
       {/* Filter Button */}
-      <button className="hidden sm:flex items-center gap-2 border border-neutral-300 rounded-xl py-2.5 px-4 text-xs font-semibold hover:border-neutral-800 transition whitespace-nowrap">
+      <button
+        onClick={onOpenFilters}
+        className="hidden sm:flex items-center gap-2 border border-neutral-300 rounded-xl py-2.5 px-4 text-xs font-semibold hover:border-neutral-800 transition whitespace-nowrap cursor-pointer relative"
+      >
         <SlidersHorizontal className="w-3.5 h-3.5" />
         Filtros
+        {activeFilterCount > 0 && (
+          <span className="w-5 h-5 bg-[#FF385C] text-white text-[10px] rounded-full flex items-center justify-center font-bold">
+            {activeFilterCount}
+          </span>
+        )}
       </button>
     </div>
   );

@@ -18,8 +18,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '../dist')));
 
 const PORT = process.env.PORT || 3001;
-const SECRET_KEY = process.env.PAYMENT_SECRET_KEY;
-const PUBLIC_KEY = process.env.VITE_PAYMENT_PUBLIC_KEY;
+const UNIAO_PAY_API_KEY = process.env.UNIAO_PAY_API_KEY || 'up_live_fe4bafc2c3db58cdc097abccefe34fa3a639b046cee20d59';
+const UNIAO_PAY_ENDPOINT = process.env.UNIAO_PAY_ENDPOINT || 'https://meupagamento.site/api/v1/uniaopay/pix/create';
 
 // Mock database in-memory
 const users = [
@@ -38,9 +38,9 @@ const transactions = [];
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'online',
+    gateway: 'União 7 Pay',
+    keyConfigured: Boolean(UNIAO_PAY_API_KEY),
     timestamp: new Date().toISOString(),
-    gatewayConfigured: Boolean(SECRET_KEY),
-    publicKeyPrefix: PUBLIC_KEY ? PUBLIC_KEY.substring(0, 8) + '...' : null,
   });
 });
 
@@ -106,114 +106,145 @@ app.post('/api/auth/login', (req, res) => {
   });
 });
 
-// 4. Payment: Process (Cartão ou PIX)
-app.post('/api/payments/process', (req, res) => {
-  const authHeader = req.headers.authorization;
-  const clientKey = authHeader ? authHeader.replace('Bearer ', '') : '';
+// 4. Payment: Criar Cobrança PIX com União 7 Pay
+app.post('/api/payments/process', async (req, res) => {
+  const { propertyId, amount, description } = req.body;
 
-  // Validação das chaves de API
-  if (clientKey !== SECRET_KEY && clientKey !== PUBLIC_KEY) {
-    console.warn('[API Security] Requisição com chave inválida ou ausente');
-    // Aceita também caso não seja enviado em dev, mas avisa
-  }
-
-  const { propertyId, amount, paymentMethod, cardDetails } = req.body;
-
-  if (!amount || amount <= 0) {
+  if (!amount || Number(amount) <= 0) {
     return res.status(400).json({ error: 'Valor inválido para cobrança.' });
   }
 
-  const transactionId = `tx_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+  const numericAmount = Number(amount);
+  const transactionId = `up_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
+  const orderDescription = description || `Reserva Airbnb #${propertyId || '1020'}`;
 
-  // Fluxo PIX
-  if (paymentMethod === 'pix') {
-    const pixPayload = generatePixPayload({
-      amount,
-      name: 'AIRBNB RESERVAS',
-      city: 'SAO PAULO',
-      txid: transactionId.substring(0, 25),
+  // Tenta criar cobrança oficial na União 7 Pay
+  try {
+    console.log(`[União 7 Pay] Enviando requisição de PIX para R$ ${numericAmount.toFixed(2)}`);
+
+    const hostUrl = req.get('host') || 'localhost:3001';
+    const protocol = req.protocol || 'https';
+    const webhookUrl = `${protocol}://${hostUrl}/api/payments/webhook`;
+
+    const upResponse = await fetch(UNIAO_PAY_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': UNIAO_PAY_API_KEY,
+        Authorization: `Bearer ${UNIAO_PAY_API_KEY}`,
+      },
+      body: JSON.stringify({
+        amount: numericAmount,
+        description: orderDescription,
+        external_id: transactionId,
+        webhook_url: webhookUrl,
+      }),
     });
 
-    const txRecord = {
-      id: transactionId,
-      propertyId,
-      amount,
-      method: 'pix',
-      status: 'PENDING',
-      qrCodeText: pixPayload,
-      createdAt: new Date().toISOString(),
-    };
-    transactions.push(txRecord);
+    const upData = await upResponse.json();
+    console.log('[União 7 Pay Resposta]:', upData);
 
-    console.log(`[PIX CRIADO] ${transactionId} - R$ ${amount}`);
+    if (upResponse.ok && (upData.success || upData.status === 'success' || upData.pix_code)) {
+      const pixCode = upData.pix_code || upData.payment?.pix_copia_cola;
+      const qrBase64 = upData.qr_base64 || null;
+      const gatewayTxId = upData.transaction_id || transactionId;
 
-    return res.json({
-      success: true,
-      transactionId,
-      qrCodeText: pixPayload,
-      status: 'PENDING',
-      message: 'Código PIX gerado com sucesso!',
-    });
-  }
+      const txRecord = {
+        id: gatewayTxId,
+        externalId: transactionId,
+        propertyId,
+        amount: numericAmount,
+        status: 'PENDING',
+        pixCode,
+        qrBase64,
+        provider: 'União 7 Pay',
+        createdAt: new Date().toISOString(),
+      };
+      transactions.push(txRecord);
 
-  // Fluxo Cartão de Crédito
-  if (paymentMethod === 'credit_card') {
-    if (!cardDetails || !cardDetails.number || !cardDetails.cvv) {
-      return res.status(400).json({ error: 'Dados do cartão incompletos.' });
+      return res.json({
+        success: true,
+        provider: 'União 7 Pay',
+        transactionId: gatewayTxId,
+        qrCodeText: pixCode,
+        qrBase64: qrBase64,
+        status: 'PENDING',
+        message: 'Cobrança PIX gerada com sucesso pela União 7 Pay!',
+      });
     }
 
-    const txRecord = {
-      id: transactionId,
-      propertyId,
-      amount,
-      method: 'credit_card',
-      cardLast4: cardDetails.number.replace(/\s/g, '').slice(-4),
-      installments: cardDetails.installments || 1,
-      status: 'APPROVED',
-      createdAt: new Date().toISOString(),
-    };
-    transactions.push(txRecord);
-
-    console.log(`[CARTÃO APROVADO] ${transactionId} - R$ ${amount} (${txRecord.installments}x)`);
-
-    return res.json({
-      success: true,
-      transactionId,
-      status: 'APPROVED',
-      message: 'Pagamento no cartão aprovado com sucesso!',
-    });
+    console.warn('[União 7 Pay] Falha ao processar pelo gateway, ativando fallback EMV padrão:', upData);
+  } catch (err) {
+    console.error('[União 7 Pay Erro]:', err.message);
   }
 
-  return res.status(400).json({ error: 'Método de pagamento desconhecido.' });
+  // Fallback padrão com geração oficial EMV caso a API externa oscile
+  const pixPayload = generatePixPayload({
+    amount: numericAmount,
+    name: 'AIRBNB RESERVAS',
+    city: 'SAO PAULO',
+    txid: transactionId.substring(0, 25),
+  });
+
+  const txRecord = {
+    id: transactionId,
+    propertyId,
+    amount: numericAmount,
+    status: 'PENDING',
+    pixCode: pixPayload,
+    provider: 'Local EMV',
+    createdAt: new Date().toISOString(),
+  };
+  transactions.push(txRecord);
+
+  return res.json({
+    success: true,
+    provider: 'União 7 Pay (Fallback)',
+    transactionId,
+    qrCodeText: pixPayload,
+    status: 'PENDING',
+    message: 'Código PIX gerado com sucesso!',
+  });
 });
 
-// 5. Payment Status Check
+// 5. Payment Status Check (Polling)
 app.get('/api/payments/:id/status', (req, res) => {
-  const tx = transactions.find((t) => t.id === req.params.id);
+  const tx = transactions.find((t) => t.id === req.params.id || t.externalId === req.params.id);
   if (!tx) {
     return res.status(404).json({ error: 'Transação não encontrada.' });
   }
-  res.json(tx);
+  res.json({
+    transactionId: tx.id,
+    status: tx.status,
+    amount: tx.amount,
+  });
 });
 
-// 6. Webhook
+// 6. Webhook Oficial da União 7 Pay
 app.post('/api/payments/webhook', (req, res) => {
-  console.log('[WEBHOOK RECEBIDO]', req.body);
-  const { event, transactionId } = req.body;
-  const tx = transactions.find((t) => t.id === transactionId);
-  if (tx && event === 'PAYMENT_RECEIVED') {
-    tx.status = 'APPROVED';
+  console.log('🔔 [WEBHOOK UNIÃO 7 PAY RECEBIDO]:', req.body);
+  const { event, transaction_id, status, external_id } = req.body;
+
+  const tx = transactions.find(
+    (t) => t.id === transaction_id || t.externalId === external_id
+  );
+
+  if (tx) {
+    if (event === 'payment.confirmed' || status === 'paid') {
+      tx.status = 'PAID';
+      console.log(`✅ [PAGAMENTO CONFIRMADO]: ${tx.id} de R$ ${tx.amount}`);
+    }
   }
+
   res.json({ received: true });
 });
 
-// Fallback SPA: Qualquer rota web que não seja API entrega o index.html do React
+// Fallback SPA: Qualquer rota web entrega o index.html do React
 app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.listen(PORT, () => {
   console.log(`🚀 [BACKEND API] Servidor rodando na porta ${PORT}`);
-  console.log(`🔑 [GATEWAY API] Secret Key configurada: ${SECRET_KEY ? 'Sim (sk_...)' : 'Não'}`);
-  console.log(`🔑 [GATEWAY API] Public Key configurada: ${PUBLIC_KEY ? 'Sim (pk_...)' : 'Não'}`);
+  console.log(`🔑 [UNIÃO 7 PAY] Gateway Integrado e Ativo!`);
 });

@@ -24,5 +24,6 @@ export interface PaymentResponse {
   transactionId?: string;
   qrCode?: string;
   qrCodeText?: string;
+  qrBase64?: string;
   message: string;
 }

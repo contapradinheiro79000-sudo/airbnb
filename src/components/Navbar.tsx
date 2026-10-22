@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Globe, Menu, User as UserIcon, Search, LogOut } from 'lucide-react';
+import { Globe, Menu, User as UserIcon, Search, LogOut, Heart, Briefcase, HelpCircle, Home } from 'lucide-react';
 import type { User } from '../types/authAndPayment';
 
 interface NavbarProps {
@@ -7,6 +7,12 @@ interface NavbarProps {
   onSearchClick: () => void;
   onOpenAuth: (mode: 'login' | 'register') => void;
   onLogout: () => void;
+  onOpenHost: () => void;
+  onOpenHelp: () => void;
+  onOpenTrips: () => void;
+  onOpenFavorites: () => void;
+  onOpenLangCurr: () => void;
+  favoritesCount?: number;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -14,6 +20,12 @@ export const Navbar: React.FC<NavbarProps> = ({
   onSearchClick,
   onOpenAuth,
   onLogout,
+  onOpenHost,
+  onOpenHelp,
+  onOpenTrips,
+  onOpenFavorites,
+  onOpenLangCurr,
+  favoritesCount = 0,
 }) => {
   const [userMenuOpen, setUserMenuOpen] = useState(false);
 
@@ -22,7 +34,10 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer">
+          <a
+            href="/"
+            className="flex items-center gap-2 cursor-pointer"
+          >
             <svg
               className="h-8 w-auto text-[#FF385C]"
               viewBox="0 0 32 32"
@@ -33,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <span className="text-xl font-bold tracking-tight text-[#FF385C] hidden sm:inline">
               airbnb
             </span>
-          </div>
+          </a>
 
           {/* Quick Search Pill */}
           <button
@@ -52,10 +67,17 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           {/* Right Navigation */}
           <div className="flex items-center gap-2">
-            <button className="hidden md:block text-sm font-semibold py-2 px-3.5 rounded-full hover:bg-neutral-100 transition text-neutral-800">
+            <button
+              onClick={onOpenHost}
+              className="hidden md:block text-sm font-semibold py-2 px-3.5 rounded-full hover:bg-neutral-100 transition text-neutral-800 cursor-pointer"
+            >
               Anuncie no seu espaço
             </button>
-            <button className="p-2.5 rounded-full hover:bg-neutral-100 transition text-neutral-800">
+            <button
+              onClick={onOpenLangCurr}
+              className="p-2.5 rounded-full hover:bg-neutral-100 transition text-neutral-800 cursor-pointer"
+              title="Idioma e Moeda"
+            >
               <Globe className="w-4 h-4" />
             </button>
 
@@ -92,27 +114,60 @@ export const Navbar: React.FC<NavbarProps> = ({
                           {currentUser.email}
                         </p>
                       </div>
-                      <a
-                        href="#minhas-viagens"
-                        onClick={() => setUserMenuOpen(false)}
-                        className="block px-4 py-2.5 font-medium text-neutral-700 hover:bg-neutral-50"
+                      <button
+                        onClick={() => {
+                          setUserMenuOpen(false);
+                          onOpenTrips();
+                        }}
+                        className="w-full text-left px-4 py-2.5 font-medium text-neutral-700 hover:bg-neutral-50 flex items-center gap-2.5 cursor-pointer"
                       >
-                        Viagens
-                      </a>
-                      <a
-                        href="#favoritos"
-                        onClick={() => setUserMenuOpen(false)}
-                        className="block px-4 py-2.5 font-medium text-neutral-700 hover:bg-neutral-50"
+                        <Briefcase className="w-4 h-4 text-neutral-500" />
+                        Minhas Viagens
+                      </button>
+                      <button
+                        onClick={() => {
+                          setUserMenuOpen(false);
+                          onOpenFavorites();
+                        }}
+                        className="w-full text-left px-4 py-2.5 font-medium text-neutral-700 hover:bg-neutral-50 flex items-center justify-between cursor-pointer"
                       >
-                        Favoritos
-                      </a>
+                        <div className="flex items-center gap-2.5">
+                          <Heart className="w-4 h-4 text-[#FF385C]" />
+                          Favoritos
+                        </div>
+                        {favoritesCount > 0 && (
+                          <span className="text-[10px] bg-rose-100 text-[#FF385C] font-bold px-2 py-0.5 rounded-full">
+                            {favoritesCount}
+                          </span>
+                        )}
+                      </button>
+                      <button
+                        onClick={() => {
+                          setUserMenuOpen(false);
+                          onOpenHost();
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-neutral-700 hover:bg-neutral-50 flex items-center gap-2.5 cursor-pointer"
+                      >
+                        <Home className="w-4 h-4 text-neutral-500" />
+                        Anuncie seu espaço
+                      </button>
+                      <button
+                        onClick={() => {
+                          setUserMenuOpen(false);
+                          onOpenHelp();
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-neutral-700 hover:bg-neutral-50 flex items-center gap-2.5 cursor-pointer"
+                      >
+                        <HelpCircle className="w-4 h-4 text-neutral-500" />
+                        Central de Ajuda
+                      </button>
                       <div className="border-t border-neutral-200 my-1"></div>
                       <button
                         onClick={() => {
                           onLogout();
                           setUserMenuOpen(false);
                         }}
-                        className="w-full text-left px-4 py-2.5 text-rose-600 hover:bg-rose-50 flex items-center gap-2 font-medium"
+                        className="w-full text-left px-4 py-2.5 text-rose-600 hover:bg-rose-50 flex items-center gap-2.5 font-medium cursor-pointer"
                       >
                         <LogOut className="w-4 h-4" />
                         Sair
@@ -139,20 +194,26 @@ export const Navbar: React.FC<NavbarProps> = ({
                         Entrar
                       </button>
                       <div className="border-t border-neutral-200 my-1"></div>
-                      <a
-                        href="#anuncie"
-                        onClick={() => setUserMenuOpen(false)}
-                        className="block px-4 py-2.5 text-neutral-700 hover:bg-neutral-50"
+                      <button
+                        onClick={() => {
+                          setUserMenuOpen(false);
+                          onOpenHost();
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-neutral-700 hover:bg-neutral-50 flex items-center gap-2 cursor-pointer"
                       >
+                        <Home className="w-4 h-4 text-neutral-500" />
                         Anuncie seu espaço
-                      </a>
-                      <a
-                        href="#ajuda"
-                        onClick={() => setUserMenuOpen(false)}
-                        className="block px-4 py-2.5 text-neutral-700 hover:bg-neutral-50"
+                      </button>
+                      <button
+                        onClick={() => {
+                          setUserMenuOpen(false);
+                          onOpenHelp();
+                        }}
+                        className="w-full text-left px-4 py-2.5 text-neutral-700 hover:bg-neutral-50 flex items-center gap-2 cursor-pointer"
                       >
+                        <HelpCircle className="w-4 h-4 text-neutral-500" />
                         Central de Ajuda
-                      </a>
+                      </button>
                     </>
                   )}
                 </div>

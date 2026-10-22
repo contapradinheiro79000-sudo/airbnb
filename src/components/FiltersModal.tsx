@@ -64,7 +64,7 @@ export const FiltersModal: React.FC<FiltersModalProps> = ({
 
   const handleClear = () => {
     setMinPrice(0);
-    setMaxPrice(3000);
+    setMaxPrice(1000);
     setBedrooms(0);
     setSelectedAmenities([]);
     onReset();

@@ -73,7 +73,7 @@ export default function App() {
   // Filtros Avançados
   const [filters, setFilters] = useState<FilterOptions>({
     minPrice: 0,
-    maxPrice: 3500,
+    maxPrice: 1000,
     bedrooms: 0,
     amenities: [],
   });
@@ -133,7 +133,7 @@ export default function App() {
   const activeFiltersCount = useMemo(() => {
     let count = 0;
     if (filters.minPrice > 0) count++;
-    if (filters.maxPrice < 3500) count++;
+    if (filters.maxPrice < 1000) count++;
     if (filters.bedrooms > 0) count++;
     if (filters.amenities.length > 0) count += filters.amenities.length;
     return count;
@@ -282,7 +282,7 @@ export default function App() {
                 setShowOnlyFavorites(false);
                 setFilters({
                   minPrice: 0,
-                  maxPrice: 3500,
+                  maxPrice: 1000,
                   bedrooms: 0,
                   amenities: [],
                 });
@@ -349,7 +349,7 @@ export default function App() {
         onReset={() =>
           setFilters({
             minPrice: 0,
-            maxPrice: 3500,
+            maxPrice: 1000,
             bedrooms: 0,
             amenities: [],
           })

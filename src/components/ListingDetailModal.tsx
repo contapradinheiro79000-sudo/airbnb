@@ -20,13 +20,15 @@ export const ListingDetailModal: React.FC<ListingDetailModalProps> = ({
 }) => {
   if (!property) return null;
 
-  const [nights, setNights] = useState(5);
+  const [nights, setNights] = useState(2);
   const [guests, setGuests] = useState(2);
 
   const basePrice = property.pricePerNight * nights;
-  const cleaningFee = 150;
-  const serviceFee = Math.round(basePrice * 0.12);
-  const totalPrice = basePrice + cleaningFee + serviceFee;
+  const cleaningFee = 25; // Taxa simbólica reduzida de promoção
+  const serviceFee = Math.round(basePrice * 0.05); // 5% reduzido
+  const calculatedTotal = basePrice + cleaningFee + serviceFee;
+  // Garante que o valor total nunca passe de R$ 999
+  const totalPrice = Math.min(calculatedTotal, 990);
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 md:p-6">

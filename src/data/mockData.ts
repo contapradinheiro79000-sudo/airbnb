@@ -242,9 +242,9 @@ export const mockProperties: Property[] = [
     ],
     "description": "Apartamento confortável e sem luxos desnecessários em Balneário Camboriú. Dá para fazer tudo a pé até a praia e curtir a virada do ano com economia.",
     "images": [
-      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80"
+      "/images/temporadalivre/temporadalivre_balneario_camboriu-5ef4514cf5639467eee5335dcec2f8a28ea4ec6155a01bf723a25c77840b3469.webp",
+      "/images/temporadalivre/thumb_casa-na-praia-de-leste-20-aluguel-temporada-pontal-do-parana-praia-de-leste.jpg",
+      "/images/temporadalivre/thumb_linda-e-ampla-casa-em-pontal-aluguel-temporada-pontal-do-parana-praia-de-leste.jpg"
     ]
   },
   {
@@ -281,7 +281,7 @@ export const mockProperties: Property[] = [
     ],
     "description": "Casa tranquila em Bombinhas, pertinho do mar cristalino de Quatro Ilhas e das trilhas ecológicas. Ideal para descanso em família.",
     "images": [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+      "/images/temporadalivre/temporadalivre_bombinhas-3939bace26feac1168d0d2d954a409a4eae3d1c9675341ae73aab3fa93464d78.webp",
       "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf?auto=format&fit=crop&w=1200&q=80"
     ]
@@ -359,7 +359,7 @@ export const mockProperties: Property[] = [
     ],
     "description": "Casa térrea acolhedora no sul da ilha de Florianópolis. Bairro tranquilo, perto da praia e dos barcos para a Ilha do Campeche.",
     "images": [
-      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=1200&q=80",
+      "/images/temporadalivre/temporadalivre_florianopolis-2f90374645e6e6e2e666889b67b2fe5d45c7ccd6cf68d623e6beb54b7e0ec710.webp",
       "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80"
     ]
@@ -476,7 +476,7 @@ export const mockProperties: Property[] = [
     ],
     "description": "Excelente custo-benefício em Itapema. Prédio tranquilo, perto da praia, padarias, farmácias e do calçadão.",
     "images": [
-      "https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?auto=format&fit=crop&w=1200&q=80",
+      "/images/temporadalivre/temporadalivre_meiapraia-58a5499011d05c8af6294fe376a27947faafad7241b6cada139d0b0e9645d80c.webp",
       "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1516455590571-18256e5bb9ff?auto=format&fit=crop&w=1200&q=80"
     ]
@@ -554,7 +554,7 @@ export const mockProperties: Property[] = [
     ],
     "description": "Casa prática e espaçosa em Ubatuba. Rua com moradores, perto dos quiosques e das praias do Tenório e Praia Grande.",
     "images": [
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+      "/images/temporadalivre/temporadalivre_ubatuba-3d9802b7ecd8c455093de5b1773dc9f00ec08d546e2807796e2c467599474402.webp",
       "https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1200&q=80"
     ]
@@ -632,7 +632,7 @@ export const mockProperties: Property[] = [
     ],
     "description": "Acomodação familiar no centro de Pitangueiras no Guarujá. Esqueça o carro na garagem e faça tudo a pé até a areia.",
     "images": [
-      "https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80",
+      "/images/temporadalivre/temporadalivre_guaruja-4fbfe325da9067febee39eab8d7b4a10b504f6ddb1324fd12fff1f5397a0317c.webp",
       "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1506929562872-bb421503ef21?auto=format&fit=crop&w=1200&q=80"
     ]
@@ -671,7 +671,7 @@ export const mockProperties: Property[] = [
     ],
     "description": "Casa tranquila em Juquehy para desfrutar o verão em família. Praia com águas limpas e infraestrutura excelente para caminhar.",
     "images": [
-      "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=1200&q=80",
+      "/images/temporadalivre/temporadalivre_juquehy-41916a6ad96f9ec1b4ec5f3aff8116894b7301e797a2728d16d860a5414e48f9.webp",
       "https://images.unsplash.com/photo-1471922694854-ff1b63b20054?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1200&q=80"
     ]
@@ -710,9 +710,9 @@ export const mockProperties: Property[] = [
     ],
     "description": "Excelente opção econômica em Bertioga. Quintal seguro para crianças brincarem e proximidade da praia e do canal.",
     "images": [
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+      "/images/temporadalivre/thumb_casa-de-praia-com-aluguel-temporada-pontal-do-parana-praia-de-leste.jpg",
+      "/images/temporadalivre/thumb_casa-na-praia-de-leste-na-aluguel-temporada-pontal-do-parana-praia-de-leste.jpg",
+      "/images/temporadalivre/thumb_casa-na-praia-de-leste-aluguel-temporada--praia-de-leste.jpg"
     ]
   },
   {

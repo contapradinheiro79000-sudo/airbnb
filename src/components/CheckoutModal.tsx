@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import QRCode from 'qrcode';
 import {
   X,
-  QrCode,
   ShieldCheck,
   CheckCircle2,
   Copy,
@@ -32,6 +32,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
 }) => {
   const [loading, setLoading] = useState(false);
   const [pixData, setPixData] = useState<{ qrCodeText?: string; transactionId?: string } | null>(null);
+  const [qrCodeDataUrl, setQrCodeDataUrl] = useState<string>('');
   const [copied, setCopied] = useState(false);
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [timeLeft, setTimeLeft] = useState(900); // 15 minutos
@@ -50,12 +51,28 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
           amount: totalPrice,
           paymentMethod: 'pix',
         })
-        .then((res) => {
+        .then(async (res) => {
           if (isMounted) {
             setPixData({
               qrCodeText: res.qrCodeText,
               transactionId: res.transactionId,
             });
+
+            if (res.qrCodeText) {
+              try {
+                const url = await QRCode.toDataURL(res.qrCodeText, {
+                  width: 320,
+                  margin: 1,
+                  color: {
+                    dark: '#000000',
+                    light: '#FFFFFF',
+                  },
+                });
+                if (isMounted) setQrCodeDataUrl(url);
+              } catch (err) {
+                console.error('Erro ao gerar imagem do QR Code:', err);
+              }
+            }
             setLoading(false);
           }
         })
@@ -197,8 +214,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
                 </div>
               ) : (
                 <div className="space-y-4 p-5 border border-neutral-200 rounded-2xl bg-neutral-50">
-                  <div className="w-52 h-52 mx-auto bg-white p-3 rounded-2xl border border-neutral-300 shadow-md flex items-center justify-center">
-                    <QrCode className="w-44 h-44 text-neutral-900" />
+                  <div className="w-56 h-56 mx-auto bg-white p-3 rounded-2xl border border-neutral-300 shadow-md flex items-center justify-center">
+                    {qrCodeDataUrl ? (
+                      <img
+                        src={qrCodeDataUrl}
+                        alt="QR Code Pix Oficial"
+                        className="w-full h-full object-contain"
+                      />
+                    ) : (
+                      <Loader2 className="w-8 h-8 animate-spin text-[#00B495]" />
+                    )}
                   </div>
 
                   <p className="text-xs text-neutral-600 font-medium">

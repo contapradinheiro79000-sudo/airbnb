@@ -31,6 +31,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
   onSuccess,
 }) => {
   const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [pixData, setPixData] = useState<{ qrCodeText?: string; transactionId?: string } | null>(null);
   const [qrCodeDataUrl, setQrCodeDataUrl] = useState<string>('');
   const [copied, setCopied] = useState(false);
@@ -42,6 +43,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
     if (isOpen && property) {
       let isMounted = true;
       setLoading(true);
+      setErrorMessage('');
       setPaymentSuccess(false);
       setTimeLeft(900);
 
@@ -78,8 +80,11 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             setLoading(false);
           }
         })
-        .catch(() => {
-          if (isMounted) setLoading(false);
+        .catch((err) => {
+          if (isMounted) {
+            setLoading(false);
+            setErrorMessage(err.message || 'Erro ao comunicar com a União 7 Pay.');
+          }
         });
 
       return () => {
@@ -217,15 +222,22 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
             </div>
 
             {/* Timer de Expiração */}
-            <div className="flex items-center justify-between text-xs bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-2.5 rounded-xl font-medium">
-              <div className="flex items-center gap-2">
-                <Clock className="w-4 h-4 text-amber-600 shrink-0" />
-                <span>Pague dentro do prazo para garantir as datas</span>
+            {errorMessage ? (
+              <div className="p-4 bg-rose-50 border border-rose-200 text-rose-800 rounded-2xl text-xs space-y-2">
+                <p className="font-bold">Aviso da União 7 Pay:</p>
+                <p>{errorMessage}</p>
               </div>
-              <span className="font-mono font-bold text-amber-700 text-sm">
-                {formattedTime}
-              </span>
-            </div>
+            ) : (
+              <div className="flex items-center justify-between text-xs bg-amber-50 border border-amber-200 text-amber-900 px-3.5 py-2.5 rounded-xl font-medium">
+                <div className="flex items-center gap-2">
+                  <Clock className="w-4 h-4 text-amber-600 shrink-0" />
+                  <span>Pague dentro do prazo para garantir as datas</span>
+                </div>
+                <span className="font-mono font-bold text-amber-700 text-sm">
+                  {formattedTime}
+                </span>
+              </div>
+            )}
 
             {/* Área do QR Code Pix */}
             <div className="space-y-4 text-center">

@@ -114,13 +114,12 @@ app.post('/api/payments/process', async (req, res) => {
     return res.status(400).json({ error: 'Valor inválido para cobrança.' });
   }
 
-  const numericAmount = Number(amount);
+  const numericAmount = Math.max(20, Number(amount));
   const transactionId = `up_${Date.now()}_${Math.random().toString(36).substring(2, 7)}`;
   const orderDescription = description || `Reserva Airbnb #${propertyId || '1020'}`;
 
-  // Tenta criar cobrança oficial na União 7 Pay
   try {
-    console.log(`[União 7 Pay] Enviando requisição de PIX para R$ ${numericAmount.toFixed(2)}`);
+    console.log(`[União 7 Pay] Enviando requisição oficial de PIX para R$ ${numericAmount.toFixed(2)}`);
 
     const hostUrl = req.get('host') || 'localhost:3001';
     const protocol = req.protocol || 'https';
@@ -145,9 +144,17 @@ app.post('/api/payments/process', async (req, res) => {
     console.log('[União 7 Pay Resposta]:', upData);
 
     if (upResponse.ok && (upData.success || upData.status === 'success' || upData.pix_code)) {
-      const pixCode = upData.pix_code || upData.payment?.pix_copia_cola;
-      const qrBase64 = upData.qr_base64 || null;
-      const gatewayTxId = upData.transaction_id || transactionId;
+      const pixCode =
+        upData.pix_code ||
+        upData.payment?.pix_copia_cola ||
+        upData.transaction?.pix_code;
+
+      const qrBase64 =
+        upData.qr_base64 ||
+        upData.qr_code_base64 ||
+        upData.payment?.qr_code_base64;
+
+      const gatewayTxId = upData.transaction_id || upData.transaction?.id || transactionId;
 
       const txRecord = {
         id: gatewayTxId,
@@ -173,38 +180,16 @@ app.post('/api/payments/process', async (req, res) => {
       });
     }
 
-    console.warn('[União 7 Pay] Falha ao processar pelo gateway, ativando fallback EMV padrão:', upData);
+    return res.status(400).json({
+      error: upData.error || 'Erro retornado pela União 7 Pay ao gerar Pix.',
+      details: upData,
+    });
   } catch (err) {
     console.error('[União 7 Pay Erro]:', err.message);
+    return res.status(500).json({
+      error: `Falha na conexão com a União 7 Pay: ${err.message}`,
+    });
   }
-
-  // Fallback padrão com geração oficial EMV caso a API externa oscile
-  const pixPayload = generatePixPayload({
-    amount: numericAmount,
-    name: 'AIRBNB RESERVAS',
-    city: 'SAO PAULO',
-    txid: transactionId.substring(0, 25),
-  });
-
-  const txRecord = {
-    id: transactionId,
-    propertyId,
-    amount: numericAmount,
-    status: 'PENDING',
-    pixCode: pixPayload,
-    provider: 'Local EMV',
-    createdAt: new Date().toISOString(),
-  };
-  transactions.push(txRecord);
-
-  return res.json({
-    success: true,
-    provider: 'União 7 Pay (Fallback)',
-    transactionId,
-    qrCodeText: pixPayload,
-    status: 'PENDING',
-    message: 'Código PIX gerado com sucesso!',
-  });
 });
 
 // 5. Payment Status Check (Polling)

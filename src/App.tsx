@@ -192,8 +192,14 @@ export default function App() {
         matchesCategory = true; // Todas as 30 acomodações são de praia
       } else if (selectedCategory === 'pools') {
         matchesCategory =
-          item.title.toLowerCase().includes('piscina') ||
-          item.amenities.some((a) => a.toLowerCase().includes('piscina') || a.toLowerCase().includes('jacuzzi'));
+          item.title.toLowerCase().includes('quintal') ||
+          item.title.toLowerCase().includes('varanda') ||
+          item.amenities.some((a) =>
+            a.toLowerCase().includes('quintal') ||
+            a.toLowerCase().includes('varanda') ||
+            a.toLowerCase().includes('rede') ||
+            a.toLowerCase().includes('churrasqueira')
+          );
       } else if (selectedCategory === 'parana') {
         matchesCategory = item.category === 'parana' || item.location.includes('Paraná');
       } else if (selectedCategory === 'sc') {

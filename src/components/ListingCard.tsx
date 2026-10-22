@@ -44,12 +44,19 @@ export const ListingCard: React.FC<ListingCardProps> = ({
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
 
-        {/* Guest Favorite Badge */}
-        {property.isGuestFavorite && (
-          <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-1 rounded-full text-xs font-semibold text-neutral-800 shadow-sm">
-            Preferido dos hóspedes
-          </div>
-        )}
+        {/* Badges: Guest Favorite or Discount */}
+        <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
+          {property.isGuestFavorite && (
+            <div className="bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-xs font-semibold text-neutral-800 shadow-sm">
+              Preferido dos hóspedes
+            </div>
+          )}
+          {property.discountBadge && (
+            <div className="bg-emerald-600 text-white px-2.5 py-1 rounded-full text-[11px] font-bold shadow-sm tracking-wide">
+              {property.discountBadge}
+            </div>
+          )}
+        </div>
 
         {/* Favorite Heart Button */}
         <button
@@ -111,7 +118,12 @@ export const ListingCard: React.FC<ListingCardProps> = ({
       <p className="text-neutral-500 text-sm -mt-1">{property.dates}</p>
 
       {/* Price */}
-      <div className="mt-1 text-sm">
+      <div className="mt-1 text-sm flex items-baseline gap-2">
+        {property.originalPrice && (
+          <span className="text-neutral-400 line-through text-xs font-medium">
+            R$ {property.originalPrice.toLocaleString('pt-BR')}
+          </span>
+        )}
         <span className="font-bold text-neutral-900">
           R$ {property.pricePerNight.toLocaleString('pt-BR')}
         </span>{' '}

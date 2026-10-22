@@ -147,8 +147,18 @@ export const ListingDetailModal: React.FC<ListingDetailModalProps> = ({
           {/* Booking Widget (Checkout Box) */}
           <div className="md:col-span-1">
             <div className="sticky top-20 border border-neutral-200 rounded-2xl p-5 shadow-xl bg-white space-y-4">
+              {property.discountBadge && (
+                <div className="inline-block bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md">
+                  🎉 {property.discountBadge}
+                </div>
+              )}
               <div className="flex items-baseline justify-between">
                 <div>
+                  {property.originalPrice && (
+                    <span className="text-neutral-400 line-through text-sm mr-2 font-medium">
+                      R$ {property.originalPrice}
+                    </span>
+                  )}
                   <span className="text-2xl font-extrabold text-neutral-900">
                     R$ {property.pricePerNight}
                   </span>{' '}

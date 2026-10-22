@@ -5,6 +5,8 @@ export interface Property {
   distance: string;
   dates: string;
   pricePerNight: number;
+  originalPrice?: number;
+  discountBadge?: string;
   rating: number;
   reviewCount: number;
   images: string[];
